@@ -1,0 +1,32 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Local-only archive of unused files
+_archive/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Runtime output
+logs/
+
+# Data: keep only hand-labelled training/evaluation files and the trained
+# classifier; crawled articles, market DB and other runtime state stay local.
+data/*
+!data/relevance/
+data/relevance/*
+!data/relevance/labels_*.json
+!data/relevance/eval_labels.json
+!data/relevance/fulltext_truth.json
+!data/relevance/fulltext_truth_review.md
+!data/relevance/sentiment_labels.json
+!data/relevance/sentiment_review.md
+!data/relevance/tw_sentiment_labels.json
+!data/relevance/tw_sample_titles.json
+!data/relevance/feedback.jsonl
+!data/relevance/classifier.json
+!data/relevance/tw_axis.json

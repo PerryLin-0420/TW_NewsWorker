@@ -1,0 +1,14 @@
+{
+ "center": 0.0013090397877984087,
+ "scale": 0.014837328555486045,
+ "n": 5278,
+ "model": "intfloat/multilingual-e5-base",
+ "positive": [
+  "台灣出口訂單強勁、台股大漲、企業獲利創新高、利多台灣",
+  "Taiwan exports surge, TAIEX rallies, record profits for Taiwanese firms"
+ ],
+ "negative": [
+  "台灣出口衰退、台股重挫、企業虧損、關稅與地緣風險升高、利空台灣",
+  "Taiwan exports slump, TAIEX plunges, tariffs and geopolitical risks hit Taiwan"
+ ]
+}

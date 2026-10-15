@@ -1,0 +1,415 @@
+{
+  "claude_exe": "",
+  "rss_sources": [
+    {
+      "name": "CNBC Finance",
+      "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+      "lang": "en",
+      "region": "美國"
+    },
+    {
+      "name": "CNBC World Economy",
+      "url": "https://www.cnbc.com/id/20910258/device/rss/rss.html",
+      "lang": "en",
+      "region": "美國"
+    },
+    {
+      "name": "Yahoo Finance",
+      "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5EGSPC,%5ESOX,TSM,CL%3DF,GC%3DF&region=US&lang=en-US",
+      "lang": "en",
+      "region": "美國"
+    },
+    {
+      "name": "Seeking Alpha",
+      "url": "https://seekingalpha.com/feed.xml",
+      "lang": "en",
+      "region": "美國"
+    },
+    {
+      "name": "MarketWatch",
+      "url": "https://feeds.marketwatch.com/marketwatch/marketpulse/",
+      "lang": "en",
+      "region": "美國"
+    },
+    {
+      "name": "Bloomberg Markets",
+      "url": "https://feeds.bloomberg.com/markets/news.rss",
+      "lang": "en",
+      "region": "全球"
+    },
+    {
+      "name": "Bloomberg Economics",
+      "url": "https://feeds.bloomberg.com/economics/news.rss",
+      "lang": "en",
+      "region": "全球"
+    },
+    {
+      "name": "Bloomberg Technology",
+      "url": "https://feeds.bloomberg.com/technology/news.rss",
+      "lang": "en",
+      "region": "全球"
+    },
+    {
+      "name": "FT Markets",
+      "url": "https://www.ft.com/rss/home/uk",
+      "lang": "en",
+      "region": "歐洲"
+    },
+    {
+      "name": "BBC Business",
+      "url": "http://feeds.bbci.co.uk/news/business/rss.xml",
+      "lang": "en",
+      "region": "歐洲"
+    },
+    {
+      "name": "Guardian Business",
+      "url": "https://www.theguardian.com/uk/business/rss",
+      "lang": "en",
+      "region": "歐洲"
+    },
+    {
+      "name": "DW Business",
+      "url": "https://rss.dw.com/rdf/rss-en-bus",
+      "lang": "en",
+      "region": "歐洲"
+    },
+    {
+      "name": "Euronews Business",
+      "url": "https://www.euronews.com/rss?level=theme&name=business",
+      "lang": "en",
+      "region": "歐洲"
+    },
+    {
+      "name": "Nikkei Asia",
+      "url": "https://asia.nikkei.com/rss/feed/nar",
+      "lang": "en",
+      "region": "亞洲"
+    },
+    {
+      "name": "NHK 経済",
+      "url": "https://www3.nhk.or.jp/rss/news/cat5.xml",
+      "lang": "ja",
+      "region": "亞洲"
+    },
+    {
+      "name": "Korea Times Biz",
+      "url": "https://feed.koreatimes.co.kr/k/business.xml",
+      "lang": "en",
+      "region": "亞洲"
+    },
+    {
+      "name": "KED Global",
+      "url": "https://www.kedglobal.com/rss/news.xml",
+      "lang": "en",
+      "region": "亞洲"
+    },
+    {
+      "name": "SCMP Business",
+      "url": "https://www.scmp.com/rss/92/feed",
+      "lang": "en",
+      "region": "亞洲"
+    },
+    {
+      "name": "Business Times SG",
+      "url": "https://www.businesstimes.com.sg/rss/international",
+      "lang": "en",
+      "region": "亞洲"
+    },
+    {
+      "name": "OilPrice",
+      "url": "https://oilprice.com/rss/main",
+      "lang": "en",
+      "region": "大宗商品"
+    },
+    {
+      "name": "Mining.com",
+      "url": "https://www.mining.com/feed/",
+      "lang": "en",
+      "region": "大宗商品"
+    },
+    {
+      "name": "Yahoo奇摩財經",
+      "url": "https://tw.stock.yahoo.com/rss",
+      "lang": "zh",
+      "region": "台灣"
+    },
+    {
+      "name": "鉅亨網",
+      "url": "https://news.cnyes.com/api/v3/news/category/tw_stock?lang=zh-TW&limit=20",
+      "lang": "zh",
+      "region": "台灣",
+      "type": "json_api",
+      "json_path": "items.data",
+      "title_field": "title",
+      "url_field": "newsId",
+      "url_template": "https://news.cnyes.com/news/id/{newsId}",
+      "time_field": "publishAt"
+    },
+    {
+      "name": "經濟日報 產業",
+      "url": "https://money.udn.com/rssfeed/news/1001/5591?ch=money",
+      "lang": "zh",
+      "region": "台灣"
+    },
+    {
+      "name": "中央社 財經",
+      "url": "https://feeds.feedburner.com/rsscna/finance",
+      "lang": "zh",
+      "region": "台灣"
+    }
+  ],
+  "keywords": {
+    "zh": [
+      "債券",
+      "匯率",
+      "利率",
+      "聯準會",
+      "Fed",
+      "通膨",
+      "央行",
+      "美元",
+      "升息",
+      "降息",
+      "殖利率",
+      "GDP",
+      "通貨膨脹",
+      "貨幣政策",
+      "外匯",
+      "景氣",
+      "財政",
+      "總體經濟",
+      "歐元",
+      "日圓",
+      "台股",
+      "股市",
+      "股價",
+      "大盤",
+      "加權指數",
+      "上漲",
+      "下跌",
+      "外資",
+      "投信",
+      "自營",
+      "融資",
+      "融券",
+      "法人",
+      "三大法人",
+      "上市",
+      "上櫃",
+      "IPO",
+      "掛牌",
+      "財報",
+      "法說",
+      "營收",
+      "獲利",
+      "除權",
+      "除息",
+      "股利",
+      "配息",
+      "半導體",
+      "晶片",
+      "IC設計",
+      "晶圓",
+      "科技",
+      "電子",
+      "PCB",
+      "AI股",
+      "AI概念",
+      "AI晶片",
+      "AI伺服器",
+      "AI應用",
+      "AI投資",
+      "人工智慧",
+      "伺服器",
+      "資料中心",
+      "HPC",
+      "CoWoS",
+      "台積電",
+      "聯發科",
+      "鴻海",
+      "廣達",
+      "緯創",
+      "英業達",
+      "銀行",
+      "壽險",
+      "金控",
+      "證券",
+      "基金",
+      "能源",
+      "石油",
+      "天然氣",
+      "電力",
+      "再生能源",
+      "黃金",
+      "原物料",
+      "大宗商品",
+      "產業",
+      "供應鏈",
+      "出口",
+      "進口",
+      "貿易",
+      "關稅",
+      "美中",
+      "地緣",
+      "制裁"
+    ],
+    "en": [
+      "bond",
+      "yield",
+      "forex",
+      "Fed",
+      "inflation",
+      "interest rate",
+      "central bank",
+      "GDP",
+      "recession",
+      "currency",
+      "dollar",
+      "rate hike",
+      "rate cut",
+      "macro",
+      "monetary policy",
+      "treasury",
+      "exchange rate",
+      "ECB",
+      "BOJ",
+      "debt",
+      "stock",
+      "stock market",
+      "equity",
+      "S&P",
+      "Nasdaq",
+      "Dow",
+      "earnings",
+      "revenue",
+      "profit",
+      "guidance",
+      "outlook",
+      "semiconductor",
+      "chip",
+      "TSMC",
+      "Nvidia",
+      "AI",
+      "tech",
+      "supply chain",
+      "tariff",
+      "trade war",
+      "sanction",
+      "IPO",
+      "merger",
+      "acquisition",
+      "buyback",
+      "oil",
+      "crude",
+      "energy",
+      "natural gas",
+      "gold",
+      "silver",
+      "copper",
+      "commodities",
+      "market",
+      "rally",
+      "selloff",
+      "correction",
+      "volatility"
+    ],
+    "ja": [
+      "半導体",
+      "台湾",
+      "日銀",
+      "利上げ",
+      "利下げ",
+      "金利",
+      "インフレ",
+      "円安",
+      "円高",
+      "消費税",
+      "株価",
+      "決算",
+      "輸出",
+      "輸入",
+      "関税",
+      "貿易",
+      "米国",
+      "中国",
+      "韓国",
+      "供給網",
+      "制裁",
+      "原油",
+      "天然ガス",
+      "資源",
+      "為替",
+      "経済",
+      "景気",
+      "企業",
+      "投資",
+      "市場",
+      "銀行",
+      "証券",
+      "上場"
+    ]
+  },
+  "forecast": {
+    "five_day_in_email": true
+  },
+  "weekly_report": {
+    "enabled": false
+  },
+  "region_order": [
+    "台灣",
+    "美國",
+    "亞洲",
+    "歐洲",
+    "大宗商品",
+    "全球"
+  ],
+  "schedule": {
+    "daily": "08:00"
+  },
+  "crawler": {
+    "max_articles_per_source": 25,
+    "request_timeout": 15,
+    "request_delay_seconds": 1,
+    "max_content_chars": 3000,
+    "max_fetch_workers": 12,
+    "skip_fetch_domains": ["bloomberg.com"]
+  },
+  "selector": {
+    "top_n_per_region": 6,
+    "max_articles_per_event": 2,
+    "max_event_size": 8,
+    "cluster_min_shared_terms": 2,
+    "cluster_jaccard_threshold": 0.34,
+    "keyword_bonus": 2.0,
+    "baseline_window_days": 7,
+    "min_burst_score": 1.0,
+    "min_baseline_docs_floor": 1000,
+    "relevance": {
+      "enabled": true,
+      "drop_below": 0.4,
+      "keyword_drop_below": 0.3,
+      "penalty_below": 0.6,
+      "penalty_factor": 0.5,
+      "high_min": 0.5,
+      "tw_neutral_band": 0.5
+    }
+  },
+  "event_threads": {
+    "dormant_after_days_single": 4,
+    "dormant_after_days_multi": 10
+  },
+  "summarizer": {
+    "delay_between_calls_seconds": 3,
+    "timeout_seconds": 240
+  },
+  "monitor": {
+    "source_failure_alert_threshold": 6,
+    "log_lines_in_alert": 60
+  },
+  "market_correlation": {
+    "rolling_window_days": 60,
+    "recent_days": 63,
+    "z_threshold": 2.0,
+    "min_baseline_obs": 30
+  }
+}

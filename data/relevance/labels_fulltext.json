@@ -1,0 +1,40 @@
+{
+ "note": "human full-text review (human_label in fulltext_truth.json) overrides earlier title-based labels; impact-* => finance, non-economic => non-finance",
+ "finance_titles": [
+  "All U.S. bombers leave UK air base on concerns of suspected terror plots; more tankers struck near Iran in the Middle East",
+  "Can Iran replace sea trade with land routes?",
+  "Roadblocks in Pakistan capital to deter Imran Khan supporters",
+  "Reflection首款開放權重模型　恐對美中AI對手構威脅"
+ ],
+ "non_finance_titles": [
+  "Sports betting is increasingly the norm for Gen Z.  Here’s why some financial and mental health experts are worried",
+  "A 'weird' IPO pull, a tainted reputation and the stalled breakout moment for AI wearables",
+  "Starting a watch collection? What beginners should know before buying",
+  "Chick-fil-A wants to stay a family business even as it expands in the U.S. and abroad",
+  "Money stolen by scammers hijacking UK social media accounts rises 400%",
+  "Tories to pledge to scrap Environment Agency and Natural England",
+  "Germany's car crisis: Can the 35-hour workweek survive?",
+  "Global Gender Gap Report: Women's hard-won gains 'fragile'",
+  "Takaichi policy speech, Malaysia budget, Pacific islands climate summit",
+  "Nitori tackles Japan's furniture waste with giant recycling center",
+  "Airbnb unlikely to let AI agents like Muse make bookings, CEO says",
+  "BOK holds fire amid Iran war uncertainty; outgoing Gov. Rhee expects won’s swift relief",
+  "140 Years of Everyday Moments",
+  "LIM Advisors founder George Long: ‘We’ve been here 30 years. We’re going to be around’",
+  "Yemen’s Houthis say they attacked Aramco facility in Riyadh with missiles, drones",
+  "美司法部不重啟鮑威爾刑事調查，獨立審計仍留後續追查空間",
+  "蘋果確認iPhone 18 Pro Max遇AT&T網路故障問題，受影響用戶需換機",
+  "川普擬任命Clayton出任AI沙皇，續掌18個情報機構",
+  "資策會數位轉型研究院主任楊惠雯：人才供給 建新模式",
+  "Grab 集團營運董事總經理余偉騰：數位店面 帶動成長",
+  "未來流通研究所總監林原慶：虛擬店長 提升效率",
+  "王品集團董事總經理英美惠：品牌布局 重稀缺性",
+  "曼都集團董事長賴淑芬：跨界發展 超前部署",
+  "Temu took the world by storm – but has the shopping app lost its thunder?",
+  "The 2029 tipping point: Western populations are about to start shrinking, piling pressure on public finances",
+  "川普新任命帶動 AI 政策轉向安全管控 台廠看好 AI 資安需求升溫",
+  "Colorado summit video: Giustra says gold rally is missing retail",
+  "葉倫批評川普對待盟友方式，支持各國反制美國關稅",
+  "Ikea to pilot online buyback service for secondhand furniture"
+ ]
+}
