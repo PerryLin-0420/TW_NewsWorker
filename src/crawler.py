@@ -11,7 +11,7 @@ import feedparser
 import requests
 import trafilatura
 
-from src import event_threads, relevance, selector
+from src import relevance, selector
 
 ROOT = Path(__file__).parent.parent
 
@@ -231,20 +231,9 @@ def run(run_dir: Path, min_published: "datetime | None" = None) -> dict:
     selection = selector.select(raw_articles, keywords, sel_cfg, run_date)
     selected_idx = selection["selected"]
 
-    # 跨日事件追蹤：把今天的事件比對到既有的事件線，附上 thread_id 等欄位，
-    # 供日後週報回溯「事件如何發酵、退燒」使用
-    et_cfg = cfg.get("event_threads", {})
-    annotated_events = event_threads.link(
-        selection["events"], run_date,
-        min_shared=sel_cfg.get("cluster_min_shared_terms", 2),
-        jaccard_threshold=sel_cfg.get("cluster_jaccard_threshold", 0.34),
-        dormant_after_days_single=et_cfg.get("dormant_after_days_single", 4),
-        dormant_after_days_multi=et_cfg.get("dormant_after_days_multi", 10),
-    )
-
     # 事件分數存檔，供日後「事件權重變化 vs 財經實際走勢」的回溯比對周報使用
     (run_dir / "events.json").write_text(
-        json.dumps(annotated_events, ensure_ascii=False, indent=2), encoding="utf-8"
+        json.dumps(selection["events"], ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
     (run_dir / "dropped.json").write_text(

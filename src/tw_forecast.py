@@ -78,7 +78,6 @@ def refresh_data() -> None:
     from src import market_data, taifex, twse_market
     today = datetime.now(TPE).date()
     taifex.update(today - timedelta(days=10), today)
-    taifex.update_vix(2)                                       # accumulate VIXTWN (only ~4 months are published)
     conn = market_data._connect()
     try:
         for name, sym in _US.items():

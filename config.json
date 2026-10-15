@@ -394,10 +394,6 @@
       "tw_neutral_band": 0.5
     }
   },
-  "event_threads": {
-    "dormant_after_days_single": 4,
-    "dormant_after_days_multi": 10
-  },
   "summarizer": {
     "delay_between_calls_seconds": 3,
     "timeout_seconds": 240

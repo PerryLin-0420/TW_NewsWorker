@@ -28,26 +28,17 @@ DB_PATH = ROOT / "data" / "market.db"
 logger = logging.getLogger("market_data")
 
 # 地區 -> [(ticker, 顯示名稱), ...]，與 config.json 的 region_order 對齊。
-# 只取大盤指數 / 宏觀利率 / 大宗商品期貨，不含個股，避免噪音；
-# 不含產業分類指數，避免各國分類標準不一致造成的跨國比較誤差。
-#
-# 指數本身多數沒有真實成交量，所以每個地區另外配一檔追蹤該指數的 ETF——
-# 價格緊貼指數走勢，同時有真實成交量可觀測變動幅度與市場熱度。VIX 沒有
-# 配對 ETF：VXX 等 VIX 相關 ETP 有 contango 遞減問題，價格會系統性偏離
-# VIX 本身，硬湊一個會誤導，故意留空比造假訊號安全。
+# 只保留 market_correlation.py 與 tw_forecast.py 實際使用的標的；其餘
+# （ETF、原油、黃金、天然氣、美元、10Y殖利率、恒生）經檢定對台股方向
+# 沒有顯著的增量預測力，已不再儲存（見 README）。
 TICKERS = {
-    "台灣": [("^TWII", "加權指數"), ("0050.TW", "元大台灣50 ETF")],
-    "美國": [("^GSPC", "S&P 500"), ("^IXIC", "Nasdaq"), ("^TNX", "10Y公債殖利率"),
-             ("SPY", "S&P 500 ETF"), ("QQQ", "Nasdaq100 ETF")],
-    "亞洲": [("^N225", "Nikkei 225"), ("^KS11", "KOSPI"), ("^HSI", "恒生指數"),
-             ("EWJ", "日本 ETF"), ("EWY", "韓國 ETF"), ("2800.HK", "恒生指數 ETF")],
-    "歐洲": [("^GDAXI", "DAX"), ("^FTSE", "FTSE 100"), ("^STOXX50E", "Euro Stoxx 50"),
-             ("EWG", "德國 ETF"), ("EWU", "英國 ETF"), ("FEZ", "歐元區50 ETF")],
-    "大宗商品": [("CL=F", "WTI原油"), ("GC=F", "黃金"), ("HG=F", "銅"), ("NG=F", "天然氣")],
-    "全球": [("^VIX", "VIX"), ("DX-Y.NYB", "美元指數"), ("UUP", "美元指數 ETF")],
-    # 半導體是橫跨台美日的全球性主題，不屬於任何單一地區——用來測試
-    # 「產業別指標 vs 大盤指數」何者更貼近新聞事件的市場反應。
-    "半導體": [("^SOX", "費城半導體指數"), ("SOXX", "iShares半導體ETF")],
+    "台灣": [("^TWII", "加權指數")],
+    "美國": [("^GSPC", "S&P 500"), ("^IXIC", "Nasdaq")],
+    "亞洲": [("^N225", "Nikkei 225"), ("^KS11", "KOSPI")],
+    "歐洲": [("^GDAXI", "DAX"), ("^FTSE", "FTSE 100"), ("^STOXX50E", "Euro Stoxx 50")],
+    "大宗商品": [("HG=F", "銅")],
+    "全球": [("^VIX", "VIX")],
+    "半導體": [("^SOX", "費城半導體指數")],
 }
 
 

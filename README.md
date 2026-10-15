@@ -10,6 +10,16 @@
 
 另有三個獨立的排程任務：市場資料快照、跨市場關聯監控、純數據週報（目前停用）。
 
+## 範例畫面
+
+**今日台股預測**（Email 開頭區塊）
+
+![今日台股預測](docs/img/email_forecast.png)
+
+**台灣新聞摘要**（每個地區一個區塊，[註N] 對應下方原文連結）
+
+![台灣新聞摘要](docs/img/email_news_taiwan.png)
+
 ---
 
 ## 目錄結構
@@ -25,23 +35,22 @@
 │   ├── crawler.py          # 抓 RSS / JSON API、抓內文、台灣相關判斷
 │   ├── selector.py         # burst 詞、事件聚類、事件評分、各地區選文
 │   ├── relevance.py        # 經濟相關度分類器、台灣利多／利空評價
-│   ├── event_threads.py    # 跨日事件線追蹤
 │   ├── history.py          # 歷史文章回補摘要、全量重新標註
 │   ├── summarizer.py       # Claude 摘要 prompt 與輸出解析、回饋標籤
 │   ├── claude_cli.py       # 呼叫 claude CLI
 │   ├── emailer.py          # HTML Email 組版與寄送（Gmail SMTP）
 │   ├── monitor.py          # 來源健康度與失敗告警
 │   ├── tw_forecast.py      # 台股開盤預測、震盪風險、5 日範圍、圖表
-│   ├── market_data.py      # Yahoo Finance 各地區指數／ETF 快照
-│   ├── twse_market.py      # 證交所成交資訊、加權指數 OHLC、三大法人、個股
-│   ├── taifex.py           # 期交所台指期日盤／夜盤、VIXTWN
+│   ├── market_data.py      # Yahoo Finance 各地區指數快照
+│   ├── twse_market.py      # 證交所加權指數 OHLC、0050 日線
+│   ├── taifex.py           # 期交所台指期日盤／夜盤
 │   ├── market_correlation.py  # 跨市場領先-落後關聯的滾動監控
 │   └── weekly_report.py    # 純數據週報
+├── docs/img/               # README 用的範例畫面與驗證圖
 └── data/                   # 執行期資料（僅 data/relevance 的標註檔進版控）
     ├── <YYYY-MM-DD_HHMM>/  # 每次執行一個資料夾：news_raw / news_filtered / events / dropped / summary.md / articles/
     ├── term_daily/         # 每日詞頻快照（burst 基準）
     ├── relevance/          # 人工標註、回饋標籤、訓練好的分類器
-    ├── event_threads.json  # 事件線登記檔
     ├── market.db           # SQLite：所有市場資料
     ├── market_correlation.json
     ├── source_health.json
@@ -65,6 +74,8 @@ pip install -r requirements.txt
 第一次執行會自動從 Hugging Face 下載 embedding 模型（約 1.1 GB），之後使用本機快取。
 
 ### 2. 環境變數
+
+repo 只附範本 `.env.example`，不含任何帳密。請自行複製一份 `.env`，並填入自己的值：
 
 ```bash
 copy .env.example .env
@@ -108,7 +119,7 @@ python main.py
 
 # 個別模組
 python -m src.market_data            # 更新 Yahoo 市場快照（近 5 天）
-python -m src.twse_market            # 更新證交所資料（近 2 個月＋近 10 日法人）
+python -m src.twse_market            # 更新加權指數 OHLC（近 2 個月）與 0050
 python -m src.taifex                 # 更新台指期（本月與上月）
 python -m src.market_correlation     # 重算跨市場關聯並印出報表
 python -m src.relevance              # 重新訓練經濟相關度分類器
@@ -123,18 +134,17 @@ python -m src.relevance              # 重新訓練經濟相關度分類器
 新環境建議依下列順序執行（證交所／期交所有頻率限制，程式每次請求間隔 3 秒，完整回補需數十分鐘）：
 
 ```bash
-# 1. Yahoo Finance：各地區指數／ETF／商品 2 年日線 → prices 表
+# 1. Yahoo Finance：關聯監控用的各地區指數 2 年日線 → prices 表
 python -m src.market_data --backfill
 
 # 2. 證交所
-python -m src.twse_market --backfill          # 10 年每日成交資訊 → twse_market
 python -m src.twse_market --backfill-ohlc     # 10 年加權指數 OHLC → twse_ohlc；0050 10 年 OHLC → yahoo_ohlc
-python -m src.twse_market --backfill-inst     # 三大法人買賣超（逐日、由新到舊、可中斷續跑）→ twse_inst
 
 # 3. 期交所
 python -m src.taifex --backfill               # 台指期近月日盤＋夜盤，自 2017-05 起 → taifex_tx
-python -m src.taifex --vix                    # VIXTWN（期交所只公開近約 4 個月，需每日累積）→ taifex_vix
 ```
+
+費半（`^SOX`）與台積電 ADR（`TSM`）由預測模組在每次執行時自動補抓近 5 天的資料。這兩檔的 10 年歷史目前沒有對應的回補指令，新環境需另外用 `yfinance` 回補。
 
 新聞歷史相關（需先有 `data/<run>/news_raw.json`）：
 
@@ -148,16 +158,51 @@ python -m src.history annotate    # 全量重新打分，並重新校準台灣�
 
 | 資料表 | 來源 | 主鍵 | 內容 |
 |---|---|---|---|
-| `prices` | Yahoo Finance | symbol, trading_date | 各地區指數、ETF、商品收盤與成交量 |
-| `twse_market` | 證交所 FMTQIK | trading_date | 全市場成交股數、金額、筆數、加權指數 |
+| `prices` | Yahoo Finance | symbol, trading_date | 加權、標普、那斯達克、費半、日經、韓股、DAX、FTSE、STOXX50、VIX、銅、台積電 ADR |
 | `twse_ohlc` | 證交所 MI_5MINS_HIST | trading_date | 加權指數開高低收 |
-| `twse_inst` | 證交所 BFI82U | trading_date | 自營商／投信／外資 買進、賣出、差額 |
-| `twse_stock` | 證交所 STOCK_DAY | symbol, trading_date | 個股原始（未還原）日線，用來補 Yahoo 缺漏 |
+| `twse_stock` | 證交所 STOCK_DAY | symbol, trading_date | 0050 原始（未還原）日線，用來補 Yahoo 缺漏 |
 | `yahoo_ohlc` | Yahoo Finance | symbol, trading_date | 0050 還原 OHLC |
 | `taifex_tx` | 期交所 | trading_date, session | 台指期近月（成交量最大的月合約）日盤／夜盤 |
-| `taifex_vix` | 期交所 | trading_date | 臺指選擇權波動率指數 |
 
 所有寫入均為 `INSERT OR REPLACE`，重跑不會重複累加。
+
+### 已捨棄的市場資料（無統計意義）
+
+下列資料曾經收集，但經檢定對台股方向**沒有顯著的增量預測力**，已停止抓取與儲存：
+
+- 美國：SPY、QQQ、10 年期公債殖利率
+- 亞洲：恒生指數、2800.HK、EWJ、EWY
+- 歐洲：EWG、EWU、FEZ
+- 商品與匯率：WTI 原油、黃金、天然氣、美元指數、UUP
+- 半導體：SOXX
+- 證交所：全市場成交金額／筆數、三大法人買賣超
+- 期交所：VIXTWN
+
+**檢定方法**：以現行模型「夜盤＋費半＋台積電 ADR」為基準，逐一加入候選特徵 $f$，對「開盤／當日／開盤後」三個方向目標各做兩項檢定：
+
+1. 概似比檢定（無懲罰邏輯迴歸）：$\text{LR}=2(\ell_{\text{基準}+f}-\ell_{\text{基準}})\sim\chi^2_1$；共 69 項檢定，以 Bonferroni 校正（$p\times 69$）
+2. 逐年 walk-forward 樣本外 AUC 的增減
+
+隔夜特徵的時間對齊方式與預測模組相同（海外交易日 $d$ 對應其後第一個台股交易日）。證交所資料一律取前一交易日的值，避免偷看當天資訊。
+
+**結果**：沒有任何一項在校正後顯著，樣本外 AUC 增幅最多 0.004。
+
+| 候選特徵 | 最小原始 p 值（目標） | Bonferroni 校正後 | 樣本外 AUC 增減 | 樣本數 |
+|---|---|---|---|---|
+| WTI 原油 | 0.0013（開盤） | 0.092 | +0.004 | 507 |
+| 黃金 | 0.020（當日） | 1.00 | +0.003 | 507 |
+| 天然氣 | 0.028（開盤） | 1.00 | +0.002 | 507 |
+| EWJ | 0.030（當日） | 1.00 | −0.001 | 507 |
+| FEZ／SOXX／EWU | 0.074～0.097（開盤） | 1.00 | ≤ +0.002 | 507 |
+| 三大法人合計 | 0.083（開盤） | 1.00 | +0.000 | 2145 |
+| 自營商買賣超 | 0.092（開盤） | 1.00 | +0.000 | 2145 |
+| 投信買賣超 | 0.13（開盤） | 1.00 | −0.002 | 2145 |
+| 外資買賣超 | 0.13（開盤後） | 1.00 | −0.001 | 2005 |
+| 成交筆數／成交金額（相對 20 日均） | ≥ 0.29 | 1.00 | ≈0 | 2145 |
+| UUP、EWG、EWY、美元指數、SPY、QQQ、10Y、恒生、2800.HK | ≥ 0.0998 | 1.00 | ≤ +0.002 | 491～508 |
+| VIXTWN 變化 | 0.099（當日） | 1.00 | 樣本不足 | 69 |
+
+VIXTWN 只有 69 筆（期交所僅公開近約 4 個月），無法驗證。0050 在 `prices` 表的資料與 `yahoo_ohlc` 重複，也一併移除。
 
 ---
 
@@ -339,28 +384,6 @@ $$
 
 Claude 依「是否對台灣經濟有影響」逐篇審查，不符合者列入 `[REJECT]`。審查結果寫入 `feedback.jsonl`（符合 = 1、剔除 = 0），作為下次重訓第一層分類器的標籤。
 
-### 10. 跨日事件線
-
-當日事件與既有事件線比對，規則同第 4 節（共享詞 ≥ 2 或 Jaccard ≥ 0.34），事件線簽名：
-
-$$
-\text{sig}(\text{thread})=
-\begin{cases}
-\text{唯一那天的全部詞} & \text{只出現 1 天}\\
-\{t\mid t \text{ 在至少 2 天出現}\} & \text{出現 2 天以上}
-\end{cases}
-$$
-
-休眠判定（超過即視為退場，之後同主題另開新線）：
-
-$$
-\text{dormant}=\text{今日}-\text{last\_seen}>
-\begin{cases}
-10\text{ 天} & \text{累計出現過} \ge 2 \text{ 個不同來源}\\
-4\text{ 天} & \text{否則（單一來源，多為定期專欄）}
-\end{cases}
-$$
-
 ---
 
 ## 台股預測公式（`tw_forecast.py`）
@@ -489,6 +512,30 @@ $$
 
 0050 使用 Yahoo 的還原收盤價，Yahoo 缺漏的最近交易日以證交所原始收盤補上。
 
+### 7. 驗證（逐年樣本外回測）
+
+2020～2026 年的每一年 $Y$，所有模型都只用 $Y$ 年以前的資料擬合，再套用到 $Y$ 年的每個交易日，完全模擬當時能做出的預測。被擬合的部分包括：D1 迴歸、樣本外誤差 $s_1$，以及範圍參數 $c_1,\kappa,L_0,\theta,c$。
+
+**隨機裁切 6 個時間點**：黑線為裁切日前 20 日收盤，D1 點的顏色代表信心等級，紅色區塊為 D2～D5 的 80% 範圍，藍線為之後的實際收盤。
+
+![加權指數驗證](docs/img/validation_crops_taiex.png)
+
+![0050 驗證](docs/img/validation_crops_0050.png)
+
+**整體統計**：
+
+![驗證統計](docs/img/validation_summary.png)
+
+| 指標 | 加權指數 | 0050 |
+|---|---|---|
+| 樣本天數 | 1,554 | 1,547 |
+| D1 方向命中率 | 73.2% | 73.7% |
+| D1 命中率：極高／高／中／低 | 91.8%／83.6%／68.8%／54.6% | 95.1%／83.5%／69.6%／51.1% |
+| 80% 範圍涵蓋率 D1～D5 | 73.3%／78.4%／77.1%／76.3%／76.2% | 75.9%／78.5%／78.5%／76.9%／77.1% |
+| 範圍寬度中位數 D1～D5（佔前收） | 1.9%／3.3%／4.3%／5.1%／5.9% | 2.0%／3.6%／4.7%／5.7%／6.5% |
+
+信心等級和命中率呈單調關係，表示信心值有鑑別力。80% 範圍的實際涵蓋率在 73～79% 之間，略低於目標，D1 最明顯，表示範圍偏窄。
+
 ---
 
 ## 跨市場關聯監控（`market_correlation.py`）
@@ -549,7 +596,7 @@ $$
 
 ## 注意事項
 
-- `.env` 含 Gmail 應用程式密碼與 Claude token，已被 `.gitignore` 排除，請勿提交。
+- `.env` 需由使用者依 `.env.example` 自行建立，內含個人的 Gmail 應用程式密碼與 Claude token。`.gitignore` 已排除此檔。
 - 證交所與期交所會封鎖請求過快的用戶端，請勿調低 `_DELAY`。
 - `bloomberg.com` 會擋爬蟲，設定在 `skip_fetch_domains` 中，改用 RSS 摘要代替全文。
 - 本專案輸出僅供參考，不構成投資建議。

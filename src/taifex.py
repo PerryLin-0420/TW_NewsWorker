@@ -7,9 +7,6 @@
 
 存入 data/market.db 的 taifex_tx 表，(trading_date, session) 為主鍵（重複寫入取代，不累加）。
 
-另外收集「臺指選擇權波動率指數（VIXTWN）」每日收盤值，存入 taifex_vix 表。期交所只公開最近約 4 個月
-的檔案（logdata/YYYYMMnew.txt），更早的無法下載，所以每天累積，供日後評估能否改善預測範圍的寬度。
-
 用法：
     python -m src.taifex             # 例行更新：本月與上月
     python -m src.taifex --backfill  # 回補到 2017-05（夜盤開始）
@@ -79,35 +76,6 @@ def fetch_range(start: date, end: date) -> list[tuple]:
     return rows
 
 
-_VIX_URL = "https://www.taifex.com.tw/file/taifex/Dailydownload/vix/log2data/{}new.txt"
-
-
-def update_vix(months: int = 5) -> int:
-    """Download the monthly VIXTWN files still published (about the last 4 months) and store daily closes."""
-    conn = _connect()
-    conn.execute("CREATE TABLE IF NOT EXISTS taifex_vix (trading_date TEXT PRIMARY KEY, vix REAL)")
-    n, t = 0, date.today().replace(day=1)
-    for _ in range(months):
-        ym = t.strftime("%Y%m")
-        try:
-            resp = requests.get(_VIX_URL.format(ym), headers=_HEADERS, timeout=30)
-            text = resp.content.decode("big5", errors="replace")
-            rows = []
-            for line in text.splitlines():
-                parts = line.split()
-                if len(parts) >= 3 and parts[0].isdigit() and len(parts[0]) == 8:
-                    rows.append((f"{parts[0][:4]}-{parts[0][4:6]}-{parts[0][6:]}", float(parts[2])))
-            conn.executemany("INSERT OR REPLACE INTO taifex_vix VALUES (?,?)", rows)
-            conn.commit()
-            n += len(rows)
-        except Exception as exc:
-            logger.warning("VIXTWN %s 失敗: %s", ym, exc)
-        t = (t - timedelta(days=1)).replace(day=1)
-        time.sleep(1)
-    conn.close()
-    return n
-
-
 def update(start: date, end: date) -> int:
     conn = _connect()
     n, cur, first = 0, start, True
@@ -133,9 +101,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s",
                         handlers=[logging.StreamHandler(sys.stdout)])
     today = date.today()
-    if "--vix" in sys.argv:
-        print("VIXTWN rows:", update_vix())
-    elif "--backfill" in sys.argv:
+    if "--backfill" in sys.argv:
         update(date(2017, 5, 1), today)
     else:
         update((today.replace(day=1) - timedelta(days=1)).replace(day=1), today)
