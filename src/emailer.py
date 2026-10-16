@@ -148,23 +148,11 @@ def _pct(v: float | None) -> str:
 
 
 _TIER_HINT = {"極高": "≥90%", "高": "75~90%", "中": "60~75%", "低": "<60%"}
-_TREND_TEXT = {"正常": "正常", "過熱": "過熱（偏離 60 日均線超過 2 個標準差）",
-               "降溫整理": "過熱後降溫整理期（歷史上之後 1~2 週平均約 -2%，約 1 個月後回到常態）"}
-
-
-def _vol_note(ratio: float) -> str:
-    """Why the range is as wide as it is: it scales with the current market volatility."""
-    if ratio >= 1.25:
-        return f"目前市場波動為歷史中位數的 {ratio:.1f} 倍，範圍因此偏寬。"
-    if ratio <= 0.8:
-        return f"目前市場波動僅為歷史中位數的 {ratio:.1f} 倍，範圍因此偏窄。"
-    return ""
 
 
 def _build_path_html(name: str, path: dict, img_src: str) -> str:
     """Block for one index/ETF: the chart carries everything for D2..D5; one line states D1's close and range."""
     c0, p1 = path["last_close"], path["d1_pred"]
-    tr = path["trend"]
     warn = ('<p style="font-size:13px;color:#b45f06;background:#fff4e5;padding:6px 8px;border-radius:4px;margin:6px 0 0;">'
             '⚠️ 與長期趨勢牴觸：目前處於過熱後的降溫整理期，但今日預測偏多，請保守看待。</p>') if path["conflict"] else ""
     return (
@@ -172,11 +160,7 @@ def _build_path_html(name: str, path: dict, img_src: str) -> str:
         f'<span style="font-size:12px;color:#888;">（{path["last_date"].strftime("%m/%d")} 收盤 {c0:,.2f}）</span></div>'
         f'<img src="{img_src}" alt="{name} 預測圖" style="width:100%;max-width:680px;border:1px solid #eee;">'
         f'<p style="font-size:13px;line-height:1.8;margin:4px 0 0;">今日（{path["dates"][0].strftime("%m/%d")}）預估收盤 '
-        f'<b>{p1:,.2f}</b>（{(p1 / c0 - 1) * 100:+.2f}%，80% 範圍 {path["d1_low"]:,.2f} ~ {path["d1_high"]:,.2f}）'
-        f'<br>'
-        f'<span style="font-size:12px;color:#666;">之後 4 個交易日只標示 80% 可能範圍（右側數值依日期顏色對應），不預測方向。'
-        f'{_vol_note(path["vol_ratio"])}'
-        f'長期趨勢：{_TREND_TEXT[tr["state"]]}</span></p>{warn}'
+        f'<b>{p1:,.2f}</b>（{(p1 / c0 - 1) * 100:+.2f}%，80% 範圍 {path["d1_low"]:,.2f} ~ {path["d1_high"]:,.2f}）</p>{warn}'
     )
 
 
@@ -229,10 +213,7 @@ def _build_forecast_html(fc: dict, image_mode: str = "cid") -> str:
                                                   "data:image/png;base64," + base64.b64encode(fc["charts"][cid]).decode()))
                   for name, path in fc.get("paths", {}).items()
                   for cid in [{"加權指數": "fc_taiex", "0050": "fc_0050"}[name]])
-        + '<p style="font-size:11px;color:#999;margin:10px 0 0;">信心＝模型對該方向給出的機率；歷史命中為同一信心等級在 2018 年起'
-        '逐年樣本外回測的實際命中率。震盪風險＝預估今日盤中高低區間，依 1、5、22 日平均區間推估，等級為預估值在歷史上的百分位。之後 4 天：回測證實沒有任何資料能預測第 2 天以後的方向，所以只標示 80% 可能範圍，'
-        '中心為今日預估價位，寬度由 5~250 日六條波動均線以衰減函數加權（越後面越重視長天期；係數以歷史資料學習，目標是範圍窄且貼近實際收盤）。'
-        '線段顏色：紅＝漲、綠＝跌，越深信心越高；紅色區間越深代表越不確定。僅供參考，不構成投資建議。</p>'
+        + '<p style="font-size:11px;color:#999;margin:10px 0 0;">歷史命中為同信心等級的逐年樣本外回測結果；D2 起只標示 80% 可能範圍，不預測方向。僅供參考，不構成投資建議。</p>'
         '</div>'
     )
 
