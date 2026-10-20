@@ -375,6 +375,7 @@
     "skip_fetch_domains": ["bloomberg.com"]
   },
   "selector": {
+    "top_n_per_region": 12,
     "relevance": {
       "enabled": true,
       "drop_below": 0.6,

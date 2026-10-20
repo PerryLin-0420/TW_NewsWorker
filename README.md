@@ -3,7 +3,7 @@
 每天早上 08:00（台北時間）自動執行：
 
 1. 從 25 個國內外 RSS／API 來源抓取前一天的財經新聞
-2. 以經濟相關度模型篩掉非經濟新聞，其餘全部送審
+2. 以經濟相關度雙模型（e5-base＋harrier）評分，每地區取分數最高的 12 篇送審
 3. 呼叫 Claude 依地區產生繁體中文重點摘要，並做第二層資格審查
 4. 以「台指期夜盤＋費半＋台積電 ADR」預測台股當日開盤方向，並給出加權指數、0050 未來 5 個交易日的 80% 可能範圍
 5. 組成 HTML Email 寄出；失敗時寄送監控告警
@@ -49,7 +49,7 @@
 ├── docs/img/               # README 用的範例畫面與驗證圖
 └── data/                   # 執行期資料（僅 data/relevance 的標註檔進版控）
     ├── <YYYY-MM-DD_HHMM>/  # 每次執行一個資料夾：news_raw / news_filtered / dropped / summary.md / articles/
-    ├── relevance/          # 人工標註、回饋標籤、訓練好的分類器
+    ├── relevance/          # 人工標註、回饋標籤、訓練好的分類器、向量快取（embeddings.sqlite，不進版控）
     ├── market.db           # SQLite：所有市場資料
     ├── market_correlation.json
     ├── source_health.json
@@ -242,13 +242,13 @@ python -m src.relevance
 | 用途 | 模型 | 連結 |
 |---|---|---|
 | 文章向量（經濟相關度、台灣評價） | **intfloat/multilingual-e5-base**（768 維，CPU 推論） | <https://huggingface.co/intfloat/multilingual-e5-base> |
-| 曾比較、未採用 | intfloat/multilingual-e5-small（384 維） | <https://huggingface.co/intfloat/multilingual-e5-small> |
-| 曾比較、未採用 | intfloat/multilingual-e5-large（1024 維） | <https://huggingface.co/intfloat/multilingual-e5-large> |
-| 中文斷詞 | jieba（加入 `config.json` 的中文關鍵字為自訂詞典） | <https://github.com/fxsjy/jieba> |
-| 日文斷詞 | fugashi + unidic-lite | <https://github.com/polm/fugashi> |
+| 文章向量（經濟相關度） | **microsoft/harrier-oss-v1-0.6b**（1024 維，CPU float32 推論） | <https://huggingface.co/microsoft/harrier-oss-v1-0.6b> |
+| 曾比較、未採用 | intfloat/multilingual-e5-small（384 維）、multilingual-e5-large（1024 維）、Qwen/Qwen3-Embedding-0.6B | <https://huggingface.co/intfloat/multilingual-e5-large> |
 | 摘要與第二層審查 | Claude（經由 `claude -p` CLI，使用 CLI 預設模型） | — |
 
-E5 的輸入一律加上 `query: ` 前綴，並做 L2 正規化。分類器檔案記錄訓練時的模型名稱，與目前模型不一致時會停用並提示重訓。
+E5 的輸入一律加上 `query: ` 前綴；harrier 加上任務指令 `Instruct: Classify whether this news article has a significant economic impact on Taiwan` 換行 `Query: `。兩者都做 L2 正規化。harrier 預設以 bf16 載入，在 CPU 上約慢 5 倍，因此強制 float32。分類器檔案記錄訓練時的模型清單，與目前模型不一致時會停用並提示重訓。
+
+向量存在 `data/relevance/embeddings.sqlite`，以「模型＋輸入文字（含前綴）的 SHA-1」為鍵：同一篇文章的輸入文字可能隨後續抓到的摘要或全文而改變（已標註文章中約 41%），以文字而非標題為鍵才不會用到舊向量。重訓時只需計算新文字的向量。
 
 ---
 
@@ -257,11 +257,11 @@ E5 的輸入一律加上 `query: ` 前綴，並做 L2 正規化。分類器檔�
 ### 1. 經濟相關度閘門（第一層）
 
 $$
-x_i=\text{E5}\big(\texttt{"query: "}+\text{title}+\texttt{". "}+\text{summary}_{[:300]}\big),\qquad
-P_i=\sigma(w^\top x_i+b)
+x_i^{(1)}=\text{E5}(t_i),\qquad x_i^{(2)}=\text{harrier}(t_i),\qquad
+P_i=\tfrac12\Big[\sigma\big(w_1^\top x_i^{(1)}+b_1\big)+\sigma\big(w_2^\top x_i^{(2)}+b_2\big)\Big]
 $$
 
-$w,b$ 為邏輯迴歸（`C=8`、`class_weight="balanced"`）以人工標籤＋回饋標籤訓練。
+$t_i$ 為「標題. 摘要前 300 字」。兩組 $w,b$ 各自以邏輯迴歸（`C=8`、`class_weight="balanced"`）用同一份人工標籤＋回饋標籤訓練，評分時取兩個機率的平均。
 
 剔除條件：
 
@@ -277,7 +277,7 @@ $$
 
 ### 2. 選文
 
-- 通過門檻的文章全部入選，不設每地區配額
+- 每地區在通過門檻的文章中，依 $P_i$ 由高到低取前 `top_n_per_region`（12）篇
 - 同一地區內標題完全相同者（通稿轉載）只留一則
 - 各地區送審文章依第二層審查（見下方第 5 節）判斷
 
@@ -321,20 +321,22 @@ $$
 
 Claude 依「是否對台灣經濟有影響」逐篇審查，不符合者列入 `[REJECT]`。審查結果寫入 `feedback.jsonl`（符合 = 1、剔除 = 0），作為下次重訓第一層分類器的標籤。
 
-**驗證（回饋迴圈是否讓第一層越來越接近 Claude 的判斷）**：取審查標準固定的 12 天（第 4 天無執行），每次執行都只用「該次之前」的人工標註＋回饋重訓第一層，再對該次送審的文章打分，與 Claude 的實際判斷比對。
+**驗證（第一層能否預先分開 Claude 的通過與駁回）**：取審查標準固定期間（10/08 16:55～10/19）的 536 篇送審文章，以 Claude 的實際判斷為準。圖中每篇文章的分數都來自沒看過它的模型（5-fold 樣本外）。
 
-![第一層與 Claude 判斷的一致性趨勢](docs/img/validation_relevance_trend.png)
+![E5 單模型沿分界方向的分佈](docs/img/validation_relevance_plane.png)
 
-| 指標 | 第 1 天 | 第 12 天 | 線性趨勢 |
-|---|---|---|---|
-| 實際駁回率（當時的門檻＋配額） | 51% | 44% | −1.2 個百分點／天 |
-| 重訓後門檻 0.6 的駁回率 | 48% | 17% | −2.4 個百分點／天 |
-| 第一層預測 Claude 判斷的 AUC | 0.67 | 0.91 | +0.014／天 |
+- 左：一般 PCA 只保留變異最大的兩個方向，主要是中／英文的差異，通過與駁回完全混在一起（2D 上 AUC 0.47）
+- 中、右：沿邏輯迴歸的法向量 $w$ 投影，兩群明顯分開（AUC 0.88）。768 維空間裡確實有區分資訊，2D 的混淆是降維造成的
+- **但中間的重疊量仍大，無法完整切開**：以保留 90% 通過文章的門檻計，重疊區（灰帶）有 123 篇，其中 55 篇是駁回；門檻右側仍有 20% 是駁回，主要是外國個別企業、他國本地新聞這類「用詞像財經、但與台灣無關」的文章
+- 調整 `C`（0.1～128）或改用非線性分類器（XGBoost 0.873、MLP 0.864、kNN 0.839）都沒有超過邏輯迴歸（0.882），瓶頸在表示層與標籤，而不是分類器
 
-- 回饋累積越多，第一層越能預先篩掉 Claude 會駁回的文章；實際駁回率降得較慢，是因為當時門檻仍為 0.40 且送審量由配額決定
-- 「重訓後門檻 0.6」只在當時已送審的文章上計算，適合看趨勢，不等於上線後的駁回率
-- 審查標準一改，舊回饋標籤就與新標準不一致，需重新累積；此驗證只涵蓋標準固定的期間
-- 不使用 Claude 駁回標籤、只以人工標註訓練時，同期門檻 0.6 的駁回率為 35%（使用全部回饋為 26%），駁回標籤是第一層最有效的訓練資料
+![雙模型分數平面](docs/img/validation_relevance_dual.png)
+
+- 改用 e5-base＋harrier 雙模型：兩個模型的分數相關係數 0.86，錯誤不完全重疊，平均後 AUC 0.90；同樣保留 90% 通過文章時，送審中的駁回比例由 20% 降到 16%
+- 左圖虛線為雙模型的門檻曲線（$P=\text{門檻}$），右上方才送審；重疊區縮小但仍存在
+- 時間切分（每次只用之前的資料訓練、預測下一次）較貼近上線情境：保留 90% 通過文章時，駁回率由 27.2% 降到 22.7%（差 −4.2 個百分點，95% 信賴區間 −8.1～−1.0）
+- 本節的 AUC 為同期間隨機切分，高於時間切分（e5 約 0.79），實際上線的重疊會比圖上更寬
+- 不使用 Claude 駁回標籤、只以人工標註訓練時，駁回率明顯較高，駁回標籤是第一層最有效的訓練資料
 
 ---
 

@@ -5,12 +5,13 @@ content fetching and the summarizer's review.
   1. Score every title (plus feed summary) with the relevance classifier; a
      curated finance keyword hit lowers the bar (config.json keywords are a
      signal, not a gate).
-  2. Keep every article above the bar — no per-region quota. Verbatim repeats
-     of a title within a region (syndicated copies) are kept once; grouping of
-     similar stories and de-duplication happen in the summarizer's review.
+  2. Per region, keep the top_n_per_region highest-scoring articles above the
+     bar. Verbatim repeats of a title within a region (syndicated copies) are
+     kept once.
 """
 import logging
 import re
+from collections import defaultdict
 
 from src import relevance
 
@@ -61,7 +62,7 @@ def select(raw_articles: list[dict], keywords_cfg: dict, sel_cfg: dict) -> dict:
         dropped = {i for i, p in enumerate(probs)
                    if p < (kw_drop_below if kw_hit[i] else drop_below)}
 
-    selected: list[int] = []
+    by_region: dict[str, list[int]] = defaultdict(list)
     seen: set[tuple[str, str]] = set()
     for i, a in enumerate(raw_articles):
         if i in dropped:
@@ -70,15 +71,22 @@ def select(raw_articles: list[dict], keywords_cfg: dict, sel_cfg: dict) -> dict:
         if key in seen:  # 同一標題（多為通稿被多家轉載）同地區只留一則
             continue
         seen.add(key)
-        selected.append(i)
+        by_region[key[0]].append(i)
+    top_n = sel_cfg.get("top_n_per_region", 12)
+    selected: list[int] = []
+    for idxs in by_region.values():
+        if probs is not None:
+            idxs.sort(key=lambda i: -probs[i])
+        selected += idxs[:top_n]
+    selected.sort()
 
     dropped_records = [
         {"title": raw_articles[i]["title"], "source": raw_articles[i]["source"],
          "region": raw_articles[i]["region"], "finance_prob": round(probs[i], 3)}
         for i in sorted(dropped, key=lambda i: probs[i])
     ]
-    logger.info("selector: %d 原始 -> 相關性過濾 %d 篇 -> %d 篇入選",
-                n, len(dropped), len(selected))
+    logger.info("selector: %d 原始 -> 相關性過濾 %d 篇 -> 每地區前 %d 篇 -> %d 篇入選，跨 %d 地區",
+                n, len(dropped), top_n, len(selected), len(by_region))
     # Economic-relevance index handed to the summarizer: score plus 高/中 tier
     # (高 = economic with concrete figures in title/feed summary, 中 = economic without).
     econ: dict[int, dict] = {}
