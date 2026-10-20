@@ -352,9 +352,6 @@
   "forecast": {
     "five_day_in_email": true
   },
-  "weekly_report": {
-    "enabled": false
-  },
   "region_order": [
     "台灣",
     "美國",

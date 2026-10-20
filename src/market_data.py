@@ -115,24 +115,9 @@ def capture(period: str = "5d") -> int:
 
 
 def backfill(period: str = "2y") -> int:
-    """一次性回補長期歷史，供未來週報相關 / 延遲相關分析的背景資料。"""
+    """一次性回補長期歷史，供延遲相關分析的背景資料。"""
     logger.info("開始回補 %s 歷史資料...", period)
     return capture(period=period)
-
-
-def load_range(symbol: str, start_date: str, end_date: str) -> list[dict]:
-    """查詢單一標的在 [start_date, end_date] 區間（依交易日期）的收盤/成交量。"""
-    conn = _connect()
-    try:
-        cur = conn.execute(
-            "SELECT trading_date, close, volume FROM prices "
-            "WHERE symbol = ? AND trading_date >= ? AND trading_date <= ? "
-            "ORDER BY trading_date",
-            (symbol, start_date, end_date),
-        )
-        return [{"date": d, "close": c, "volume": v} for d, c, v in cur.fetchall()]
-    finally:
-        conn.close()
 
 
 def load_day(trading_date: str) -> list[dict]:

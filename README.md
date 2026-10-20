@@ -8,7 +8,7 @@
 4. 以「台指期夜盤＋費半＋台積電 ADR」預測台股當日開盤方向，並給出加權指數、0050 未來 5 個交易日的 80% 可能範圍
 5. 組成 HTML Email 寄出；失敗時寄送監控告警
 
-另有三個獨立的排程任務：市場資料快照、跨市場關聯監控、純數據週報（目前停用）。
+另有兩個獨立的排程任務：市場資料快照、跨市場關聯監控。
 
 ## 範例畫面
 
@@ -44,8 +44,7 @@
 │   ├── market_data.py      # Yahoo Finance 各地區指數快照
 │   ├── twse_market.py      # 證交所加權指數 OHLC、0050 日線
 │   ├── taifex.py           # 期交所台指期日盤／夜盤
-│   ├── market_correlation.py  # 跨市場領先-落後關聯的滾動監控
-│   └── weekly_report.py    # 純數據週報
+│   └── market_correlation.py  # 跨市場領先-落後關聯的滾動監控
 ├── docs/img/               # README 用的範例畫面與驗證圖
 └── data/                   # 執行期資料（僅 data/relevance 的標註檔進版控）
     ├── <YYYY-MM-DD_HHMM>/  # 每次執行一個資料夾：news_raw / news_filtered / dropped / summary.md / articles/
@@ -98,7 +97,6 @@ copy .env.example .env
 | NewsWorker | 每日 08:00 | `run.bat`（= `python main.py --now`） |
 | MarketCorrelation | 每日 07:30 | `python -m src.market_correlation` |
 | MarketData | 每日 00:00 | `python -m src.market_data` |
-| WeeklyReport | 每週六 09:00 | `python -m src.weekly_report`（`config.json` 中 `weekly_report.enabled=false` 時不寄送） |
 
 所有任務都設定「喚醒電腦執行」，失敗時每 5 分鐘重試。
 
@@ -525,18 +523,6 @@ $$
 - 偏離的關係會依地區附加到摘要 prompt 的「市場數據背景參考」；結果檔超過 48 小時視為過期，不採用
 
 參數在 `config.json` 的 `market_correlation` 區塊。
-
----
-
-## 週報（`weekly_report.py`，目前停用）
-
-純數據、不經 LLM。對每個標的：
-
-$$
-\text{漲跌幅}=\frac{\text{區間內最後交易日收盤}}{\text{區間內第一個交易日收盤}}-1
-$$
-
-區間分別為本週（週一～週五）、上週、去年同期（往前 364 天）。
 
 ---
 

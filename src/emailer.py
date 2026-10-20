@@ -274,7 +274,7 @@ def build_message(subject: str, html_body: str, sender: str, recipients: list[st
 
 
 def send_html(subject: str, html_body: str, images: dict[str, bytes] | None = None) -> bool:
-    """通用 HTML 郵件寄送，供每日新聞摘要與週報等不同產出共用同一組憑證/收件人邏輯。"""
+    """通用 HTML 郵件寄送，統一處理憑證與收件人。"""
     gmail_addr = os.getenv("GMAIL_ADDRESS", "")
     app_pwd = os.getenv("GMAIL_APP_PASSWORD", "")
     recipient = os.getenv("RECIPIENT_EMAIL", "")
