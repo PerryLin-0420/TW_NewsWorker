@@ -375,21 +375,10 @@
     "skip_fetch_domains": ["bloomberg.com"]
   },
   "selector": {
-    "top_n_per_region": 6,
-    "max_articles_per_event": 2,
-    "max_event_size": 8,
-    "cluster_min_shared_terms": 2,
-    "cluster_jaccard_threshold": 0.34,
-    "keyword_bonus": 2.0,
-    "baseline_window_days": 7,
-    "min_burst_score": 1.0,
-    "min_baseline_docs_floor": 1000,
     "relevance": {
       "enabled": true,
       "drop_below": 0.6,
       "keyword_drop_below": 0.3,
-      "penalty_below": 0.6,
-      "penalty_factor": 0.5,
       "high_min": 0.5,
       "tw_neutral_band": 0.5
     }

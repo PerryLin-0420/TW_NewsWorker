@@ -226,15 +226,9 @@ def run(run_dir: Path, min_published: "datetime | None" = None) -> dict:
 
     stats["raw"] = len(raw_articles)
 
-    # ── 階段二：跨來源統計選文（burst + 聚類），決定誰值得抓內文 ──────
-    run_date = run_dir.name.split("_", 1)[0]  # run_dir 形如 2026-08-06_1539
-    selection = selector.select(raw_articles, keywords, sel_cfg, run_date)
+    # ── 階段二：經濟相關度門檻選文，決定誰值得抓內文 ──────
+    selection = selector.select(raw_articles, keywords, sel_cfg)
     selected_idx = selection["selected"]
-
-    # 事件分數存檔，供日後「事件權重變化 vs 財經實際走勢」的回溯比對周報使用
-    (run_dir / "events.json").write_text(
-        json.dumps(selection["events"], ensure_ascii=False, indent=2), encoding="utf-8"
-    )
 
     (run_dir / "dropped.json").write_text(
         json.dumps(selection.get("dropped", []), ensure_ascii=False, indent=2), encoding="utf-8"

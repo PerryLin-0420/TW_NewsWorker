@@ -3,7 +3,7 @@
 每天早上 08:00（台北時間）自動執行：
 
 1. 從 25 個國內外 RSS／API 來源抓取前一天的財經新聞
-2. 以「詞頻突增（burst）＋跨來源聚類＋經濟相關度模型」挑出重要事件
+2. 以經濟相關度模型篩掉非經濟新聞，其餘全部送審
 3. 呼叫 Claude 依地區產生繁體中文重點摘要，並做第二層資格審查
 4. 以「台指期夜盤＋費半＋台積電 ADR」預測台股當日開盤方向，並給出加權指數、0050 未來 5 個交易日的 80% 可能範圍
 5. 組成 HTML Email 寄出；失敗時寄送監控告警
@@ -33,7 +33,7 @@
 ├── scheduler/              # Windows 工作排程器匯出的 XML（可直接匯入）
 ├── src/
 │   ├── crawler.py          # 抓 RSS / JSON API、抓內文、台灣相關判斷
-│   ├── selector.py         # burst 詞、事件聚類、事件評分、各地區選文
+│   ├── selector.py         # 經濟相關度門檻選文
 │   ├── relevance.py        # 經濟相關度分類器、台灣利多／利空評價
 │   ├── history.py          # 歷史文章回補摘要、全量重新標註
 │   ├── summarizer.py       # Claude 摘要 prompt 與輸出解析、回饋標籤
@@ -48,8 +48,7 @@
 │   └── weekly_report.py    # 純數據週報
 ├── docs/img/               # README 用的範例畫面與驗證圖
 └── data/                   # 執行期資料（僅 data/relevance 的標註檔進版控）
-    ├── <YYYY-MM-DD_HHMM>/  # 每次執行一個資料夾：news_raw / news_filtered / events / dropped / summary.md / articles/
-    ├── term_daily/         # 每日詞頻快照（burst 基準）
+    ├── <YYYY-MM-DD_HHMM>/  # 每次執行一個資料夾：news_raw / news_filtered / dropped / summary.md / articles/
     ├── relevance/          # 人工標註、回饋標籤、訓練好的分類器
     ├── market.db           # SQLite：所有市場資料
     ├── market_correlation.json
@@ -255,38 +254,7 @@ E5 的輸入一律加上 `query: ` 前綴，並做 L2 正規化。分類器檔�
 
 ## 新聞選文公式
 
-### 1. 斷詞
-
-每則標題抽出詞集合 $T_i$：
-
-- 拉丁字母：`[A-Za-z][A-Za-z&.-]{2,}`，轉小寫，去除英文停用詞
-- 中文：jieba 斷詞，保留長度 ≥ 2 的純漢字詞
-- 日文：fugashi 斷詞，並把 `config.json` 日文關鍵字中被切開的 2～3 個片段黏回去
-
-### 2. Burst（今日突增）分數
-
-對今日出現的每個詞 $t$：
-
-$$
-p_{\text{today}}(t)=\frac{df_{\text{today}}(t)}{N_{\text{today}}},\qquad
-p_{\text{hist}}(t)=\frac{df_{\text{hist}}(t)+0.5}{\max(N_{\text{hist}},\,100)+0.5}
-$$
-
-$$
-\text{burst}(t)=\ln\frac{p_{\text{today}}(t)}{p_{\text{hist}}(t)}
-$$
-
-- $df$ 為含該詞的標題數，$N$ 為標題總數
-- 歷史基準 = 執行日前 `baseline_window_days`（7）天的每日快照加總；若 $N_{\text{hist}}<$ `min_baseline_docs_floor`（1000），再納入所有更早的快照
-- 每日快照存在 `data/term_daily/YYYY-MM-DD.json`，同日重跑覆寫而非累加
-
-**顯著詞**：$\text{burst}(t)\ge$ `min_burst_score`（1.0），且純漢字詞必須存在於 jieba 詞典（排除斷詞失敗產生的碎片）。
-
-$$
-S_i=\{t\in T_i \mid \text{burst}(t)\ge 1.0 \wedge \text{trustworthy}(t)\}
-$$
-
-### 3. 經濟相關度閘門（第一層）
+### 1. 經濟相關度閘門（第一層）
 
 $$
 x_i=\text{E5}\big(\texttt{"query: "}+\text{title}+\texttt{". "}+\text{summary}_{[:300]}\big),\qquad
@@ -295,56 +263,25 @@ $$
 
 $w,b$ 為邏輯迴歸（`C=8`、`class_weight="balanced"`）以人工標籤＋回饋標籤訓練。
 
-剔除條件（被剔除者不參與聚類與選文，但仍計入當日詞頻）：
+剔除條件：
 
 $$
 \text{drop}_i=
 \begin{cases}
 P_i<0.30 & \text{標題命中 config 關鍵字}\\
-P_i<0.40 & \text{否則}
+P_i<0.60 & \text{否則}
 \end{cases}
 $$
 
 關鍵字比對：英文用單字邊界，中日文用子字串。
 
-### 4. 事件聚類（增量式中心聚類）
+### 2. 選文
 
-依序處理每篇文章，與現有事件比對。事件的比對簽名：
+- 通過門檻的文章全部入選，不設每地區配額
+- 同一地區內標題完全相同者（通稿轉載）只留一則
+- 各地區送審文章依第二層審查（見下方第 5 節）判斷
 
-$$
-\text{sig}(E)=
-\begin{cases}
-\text{唯一成員的全部顯著詞} & |E|=1\\
-\{t \mid t \text{ 在 } E \text{ 中至少 2 篇出現}\} & |E|\ge 2
-\end{cases}
-$$
-
-文章 $i$ 可併入事件 $E$ 的條件（取共享詞最多者）：
-
-$$
-|S_i\cap\text{sig}(E)|\ge 2 \;\;\text{或}\;\; \frac{|S_i\cap\text{sig}(E)|}{|S_i\cup\text{sig}(E)|}\ge 0.34,\qquad |E|<8
-$$
-
-這樣做是為了避免 union-find 的遞移串連，也就是 A-B、B-C 各共享不同詞時，A 和 C 被硬串在一起。
-
-### 5. 事件分數
-
-$$
-\text{score}(E)=\Big(\sum_{t\in\bigcup_{i\in E}S_i}\text{burst}(t)\Big)\times\big(1+0.8\,(|\text{sources}(E)|-1)\big)
-$$
-
-再依序調整：
-
-- 任一成員命中關鍵字：$\text{score}\mathrel{+}=2.0$（`keyword_bonus`）
-- 否則若 $\max_{i\in E}P_i<0.6$：$\text{score}\mathrel{\times}=0.5$（`penalty_factor`）
-
-### 6. 各地區選文
-
-- 事件只歸屬「主要地區」，也就是成員數最多的地區（同數時取名稱排序較前者），避免跨地區事件重複占名額
-- 每地區取分數前 `top_n_per_region`（6）個事件
-- 每事件最多 `max_articles_per_event`（2）篇，來源不重複、標題不重複，優先取詞數較多的標題
-
-### 7. 經濟相關度分級（給摘要模型參考）
+### 3. 經濟相關度分級（給摘要模型參考）
 
 $$
 \text{tier}_i=
@@ -357,7 +294,7 @@ $$
 
 「含具體數據」= 正規表示式比對到「數字＋單位／幣別」，例如 `3.2%`、`$20bn`、`1.17兆`、`50 bps`。抓到全文後，若原為「中」、$P_i\ge 0.5$ 且全文含數據，升為「高」。
 
-### 8. 台灣利多／利空評價（零樣本）
+### 4. 台灣利多／利空評價（零樣本）
 
 以固定的正、反原型句定義評價軸：
 
@@ -380,7 +317,7 @@ $$
 - $\mu,s$ 為歷史上「台灣相關且經濟分級非低」文章的 $r$ 平均與標準差（`tw_axis.json`，n=5278），由 `python -m src.history annotate` 重新校準
 - 只對台灣相關文章給評價：地區為「台灣」，或標題／內文含 `taiwan`、`tsmc`、`foxconn`、`mediatek`、`hon hai` 等關鍵字
 
-### 9. 第二層審查與回饋迴圈
+### 5. 第二層審查與回饋迴圈
 
 Claude 依「是否對台灣經濟有影響」逐篇審查，不符合者列入 `[REJECT]`。審查結果寫入 `feedback.jsonl`（符合 = 1、剔除 = 0），作為下次重訓第一層分類器的標籤。
 
