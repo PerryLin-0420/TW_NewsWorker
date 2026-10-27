@@ -279,13 +279,11 @@ def send_html(subject: str, html_body: str, images: dict[str, bytes] | None = No
     app_pwd = os.getenv("GMAIL_APP_PASSWORD", "")
     recipient = os.getenv("RECIPIENT_EMAIL", "")
     recipient_2 = os.getenv("RECIPIENT_EMAIL_2", "")
-    recipient_3 = os.getenv("RECIPIENT_EMAIL_3", "")
-
     if not all([gmail_addr, app_pwd, recipient]):
         logger.error("缺少 .env 設定 (GMAIL_ADDRESS / GMAIL_APP_PASSWORD / RECIPIENT_EMAIL)")
         return False
 
-    all_recipients = [r for r in [recipient, recipient_2, recipient_3] if r]
+    all_recipients = [r for r in [recipient, recipient_2] if r]
 
     msg = build_message(subject, html_body, gmail_addr, all_recipients, images)
 

@@ -1043,3 +1043,488 @@
 {"run": "2026-10-20_0800", "title": "Tech Stocks Pull S&P 500 Higher as Opportunistic Buyers Step In", "source": "Bloomberg Technology", "label": 1, "reason": ""}
 {"run": "2026-10-20_0800", "title": "AI Firm Nscale Faces Investor Pushback Over IPO Valuation", "source": "Bloomberg Technology", "label": 0, "reason": "外國企業IPO"}
 {"run": "2026-10-20_0800", "title": "T.Rowe's Crypto ETF Outpaces S&P", "source": "Bloomberg Technology", "label": 0, "reason": "加密ETF產品"}
+{"run": "2026-10-21_0800", "title": "美股標普500指數盤中重挫 通用汽車領跌、南韓科技股拖累", "source": "Yahoo奇摩財經", "label": 0, "reason": "外國個股波動無傳導"}
+{"run": "2026-10-21_0800", "title": "布油週二衝高回落收跌0.7%，紐約11月期油挫1.80%，中東風險仍撐盤", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "IEA優先加速釋出逾2,000萬桶柴油，比羅爾稱必要時可再動用緊急儲備", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "財報激勵美股漲跌互見，台指期貨夜盤上漲634點", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "〈台股盤前要聞〉台灣美光罷工危機升溫、外銷訂單連19紅、股匯雙殺再現", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "台股再探季線 外資續賣795億元連10賣 反手敲進電子代工股", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "PCB 五雄：今年產值跨兆元 看好 AI 帶動硬體黃金時期", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "手工具美國訂單迎新契機", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "集邦：10月下旬面板報價持平", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "市場觀望美國伊朗和談進展 國際油價小跌", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "AI類股走弱油價上揚　美股開低", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "研調：電視面板零件成本增需求降　10月報價持平", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "China's new travel rules unsettle tech giants and talent", "source": "DW Business", "label": 0, "reason": "中國政策傳導不明"}
+{"run": "2026-10-21_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "As Japan pursues a chip-industry reboot, it’s being pressed to build America’s", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "How Bad Would It Get If China Blocks Rare Earths to America?", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Japan exports post huge miss in September as growth slows to 16.7%", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "United Airlines slashes 2026 profit outlook on fuel prices, but travelers keep booking despite higher fares", "source": "CNBC Finance", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-21_0800", "title": "Housing is flashing warning signs just as the Fed weighs more interest rate hikes", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Investors look to earnings to reset the bull market. The key level to watch on the S&P 500", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Traders are betting Netflix's stock drama may be coming to an end", "source": "CNBC Finance", "label": 0, "reason": "外國企業與台無關"}
+{"run": "2026-10-21_0800", "title": "Apple adds U.S. titanium supplier for iPhone Duo as supply stays tight", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Update: US Equity Indexes Mixed as Weakness in Communications Services, Technology Restrains Nasdaq Composite", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "United Airlines Earnings Stop the Stock’s Tuesday Rally in Its Tracks", "source": "Yahoo Finance", "label": 0, "reason": "外國個別企業股價"}
+{"run": "2026-10-21_0800", "title": "Dow Jones Futures: AI Stocks Jump On SpaceX, Supermicro; Tesla, Meta On Deck", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Morgan Stanley sees new hurdle for Microsoft stock", "source": "Yahoo Finance", "label": 0, "reason": "個股評論缺傳導"}
+{"run": "2026-10-21_0800", "title": "Choppy Trading Leaves Dow Higher And Nasdaq Flat", "source": "Seeking Alpha", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Silicom: Attractively Poised Ahead Of Q3 Earnings", "source": "Seeking Alpha", "label": 0, "reason": "外國個股無關台灣"}
+{"run": "2026-10-21_0800", "title": "Kazakh borrowers issue billions of yuan debt as China ties tighten", "source": "Nikkei Asia", "label": 0, "reason": "他國融資，與台無關"}
+{"run": "2026-10-21_0800", "title": "China's medtech scores bright prognosis as it gains on global brands", "source": "Nikkei Asia", "label": 0, "reason": "中國產業，與台無關"}
+{"run": "2026-10-21_0800", "title": "Tokyo area condo prices hit half-year record, but signs of slowdown emerge", "source": "Nikkei Asia", "label": 0, "reason": "日本房市本地新聞"}
+{"run": "2026-10-21_0800", "title": "French unrest, AI debt risks push investors toward ultralong JGBs", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Hyundai Motor profit falls 30% as Middle East disruption, US tariffs bite", "source": "KED Global", "label": 0, "reason": "外國個別企業財報"}
+{"run": "2026-10-21_0800", "title": "Chinese battery giant CATL hit by profit slowdown as EV headwind fears grow", "source": "SCMP Business", "label": 0, "reason": "外國個別企業財報"}
+{"run": "2026-10-21_0800", "title": "Chinese carmakers gear up European production to sidestep tariffs, import quota", "source": "SCMP Business", "label": 0, "reason": "中歐車市，與台無關"}
+{"run": "2026-10-21_0800", "title": "UK jobs market shows some recovery signs as BOE mulls rate hike", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "As Japan pursues a chip-industry reboot, it’s being pressed to build America’s", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Malaysia’s economy: Five takeaways from GDP, trade and inflation figures", "source": "Business Times SG", "label": 0, "reason": "他國總體經濟數據"}
+{"run": "2026-10-21_0800", "title": "US allows dark-fleet oil tankers to shed sanctions amid bid to boost oil supply", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Netflix gives downbeat outlook as streaming hits dry up", "source": "FT Markets", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-21_0800", "title": "How is the US economy really doing under President Trump?", "source": "BBC Business", "label": 0, "reason": "泛論缺乏具體事件"}
+{"run": "2026-10-21_0800", "title": "European air fares could rise by as much as 20% in 2027, Ryanair boss predicts", "source": "Guardian Business", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Trump's diesel deal with Russia is unlikely to significantly lower global fuel prices despite expectations of rapid relief", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Germany's China calculation shifts as import pressures eclipse export benefits", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Euro plummets against US dollar: Has the next financial crisis begun?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Global trade weathers Iran, Ukraine and Trump's tariffs", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Diesel prices are surging putting further pressure on Europe", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "China's new travel rules unsettle tech giants and talent", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Will Germany have enough gas this winter amid energy supply crunch?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Germany faces energy tax losses as EV sales rise", "source": "DW Business", "label": 0, "reason": "他國地方財政議題"}
+{"run": "2026-10-21_0800", "title": "Why the era of cheap government debt is over", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "How Bad Would It Get If China Blocks Rare Earths to America?", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Petrobras' Deepwater Push Sets Off a Race for Offshore Vessels", "source": "OilPrice", "label": 0, "reason": "外國企業個別消息"}
+{"run": "2026-10-21_0800", "title": "Europe’s Power Demand Returns to Growth", "source": "OilPrice", "label": 0, "reason": "歐洲本地用電議題"}
+{"run": "2026-10-21_0800", "title": "Energy Costs Are Driving U.S. Inflation, and Wages Aren't Keeping Up", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "API: Crude, Product Inventories Continue to Draw", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "The Middle East's Next Energy Boom Has Nothing to Do With Oil", "source": "OilPrice", "label": 0, "reason": "概念討論無傳導"}
+{"run": "2026-10-21_0800", "title": "Norway's Gas Production Plunges 12.6% as Europe Heads into Winter", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "EU Stands Firm Against Arctic Oil and Gas Drilling Despite Energy Crisis", "source": "OilPrice", "label": 0, "reason": "歐盟地方政策"}
+{"run": "2026-10-21_0800", "title": "Chevron Moves to Take Over Russia's Most Prized Iraqi Oil Field", "source": "OilPrice", "label": 0, "reason": "外國企業個別消息"}
+{"run": "2026-10-21_0800", "title": "Russia’s Oil Export Revenue Slides as Production Declines", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "The Next Major Oil Supply Shock Could Come From Saudi Arabia", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Copper surplus masks looming $332B mine shortfall", "source": "Mining.com", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "US Stock Futures Advance on AI Earnings Boost: Markets Wrap", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "Latest Oil Market News and Analysis for Oct. 21", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "AI Stocks Rally After Super Micro Preliminary Sales Bring Relief", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "United Misses Estimates, Squeezed by Soaring Jet Fuel Costs", "source": "Bloomberg Markets", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-21_0800", "title": "The Next Big AI Debt Wave Is Pushing Credit Swaps to New Highs", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "US Pending Home Sales Plunged in September to a Record Low", "source": "Bloomberg Economics", "label": 0, "reason": "美國本地房市"}
+{"run": "2026-10-21_0800", "title": "UK Dealers See £3 Billion More Gilt Sales as Headroom Falls", "source": "Bloomberg Economics", "label": 0, "reason": "英國本地財政"}
+{"run": "2026-10-21_0800", "title": "Traders are growing wary of a copper price crash with no sign of tariffs", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "German Investor Outlook Worsens for First Time Since April", "source": "Bloomberg Economics", "label": 0, "reason": "德國本地經濟"}
+{"run": "2026-10-21_0800", "title": "Musk Says ASML and Others Are Expediting Chipmaking Gear for Terafab", "source": "Bloomberg Technology", "label": 1, "reason": ""}
+{"run": "2026-10-21_0800", "title": "BOK Seen Taking Breather to Assess Impact of Back-to-Back Hikes", "source": "Bloomberg Technology", "label": 0, "reason": "他國本地政策"}
+{"run": "2026-10-21_0800", "title": "Super Micro Jumps After Preliminary Results Top Estimates", "source": "Bloomberg Technology", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "白銀反彈失利恐測 57 美元關卡 分析師： Fed 決策與中東情勢成關鍵", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "美原油庫存驟降 中東情勢加劇國際油價上漲壓力", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "〈台股盤前要聞〉輝達DSX POD AI工廠6台廠入列合作夥伴、外資終止連十賣", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "製鞋廠志強-KY自結前9月稅後賺6.81億元 每股純益3.4元", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "AI產業出口暢旺 三三會示警：傳產仍辛苦、台灣應融入全球供應鏈", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "〈力積電法說〉Q4營收估季增雙位數 明年成熟製程代工價格再漲10-20%", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "【量大強漲股整理】錯過台股反彈下一波新主流，準備出列！", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "外資中止連10賣！台股期現貨齊翻多 買超友達、鴻海及南亞各逾2萬張", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "台股結算殺尾盤！AI基本面未變，第四季反攻關鍵浮現", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "黃仁勳：AI 需求異常強勁、產能才是瓶頸 輝達攜手台供應鏈大擴產", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "中東戰火升級疑慮重燃　國際油價結算交易中上漲", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "力積電：第4季營收估增2位數　新廠規劃鎖定台日星", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "China's Oppo pushes premium smartphones to combat component crunch", "source": "Nikkei Asia", "label": 0, "reason": "外國企業個別消息"}
+{"run": "2026-10-22_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Tesla beats on earnings and sales even as auto revenue declines", "source": "CNBC Finance", "label": 0, "reason": "外國個別企業財報"}
+{"run": "2026-10-22_0800", "title": "Housing is flashing warning signs just as the Fed weighs more interest rate hikes", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Apple's iPhone Duo in short supply — plus, the 2 stocks fueling an AI rebound", "source": "CNBC Finance", "label": 0, "reason": "投資節目產品消息"}
+{"run": "2026-10-22_0800", "title": "Expanding AI trade is turning safety stocks into a 'Texas hedge'", "source": "CNBC Finance", "label": 0, "reason": "單純市場概念討論"}
+{"run": "2026-10-22_0800", "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge", "source": "CNBC Finance", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-22_0800", "title": "UK inflation jumps to 3.5% — cementing rate hike expectations", "source": "CNBC World Economy", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Car buyers are demanding lower prices and better tech. Automakers must deliver both", "source": "CNBC World Economy", "label": 0, "reason": "產業概念性討論"}
+{"run": "2026-10-22_0800", "title": "Dow Jones Futures Fall; Meta, Tesla Are Earnings Movers After SpaceX Leads Bullish Nasdaq Move", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "NXP Semiconductors (NXPI) Laps the Stock Market: Here's Why", "source": "Yahoo Finance", "label": 0, "reason": "個股例行漲跌"}
+{"run": "2026-10-22_0800", "title": "Update: US Equity Indexes Rise as Blockbuster SpaceX Results, Super Micro Computer's Fiscal Q1 Update Boosts AI Trade", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Stock Market Today, Oct. 21: Super Micro Computer Raises Full-Year Revenue Guidance on Strong AI Demand", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Technology Stocks Pop, Lead Nasdaq Higher", "source": "Seeking Alpha", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Gundam maker Bandai Namco's stock surge reflects market AI doubts", "source": "Nikkei Asia", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-22_0800", "title": "Japan growth strategy to focus on chips in short term, AI in medium term", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Japan's Kansai Paint to double India automotive coating output", "source": "Nikkei Asia", "label": 0, "reason": "外國企業海外擴產"}
+{"run": "2026-10-22_0800", "title": "China's Oppo pushes premium smartphones to combat component crunch", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "'De-CATLization' tests China's battery king as share price falls 10%", "source": "Nikkei Asia", "label": 0, "reason": "外國個別企業股價"}
+{"run": "2026-10-22_0800", "title": "UK under pressure to align with EU duties on Chinese EVs", "source": "Nikkei Asia", "label": 0, "reason": "他國貿易政策"}
+{"run": "2026-10-22_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "AI trade isn’t just about tech stocks but also power, TCW says", "source": "KED Global", "label": 0, "reason": "單純投資概念討論"}
+{"run": "2026-10-22_0800", "title": "Hyundai Motor profit falls 30% as Middle East disruption, US tariffs bite", "source": "KED Global", "label": 0, "reason": "外國個別企業財報"}
+{"run": "2026-10-22_0800", "title": "Greenback holds steady as Middle East tensions simmer, oil rises", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "UK inflation picks up more than expected to 3.5% in September", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Chinese automaker reports set to shine before challenges mount", "source": "Business Times SG", "label": 0, "reason": "外國車廠個別消息"}
+{"run": "2026-10-22_0800", "title": "Musk sets lower sales target for Tesla as it explores SpaceX merger", "source": "FT Markets", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-22_0800", "title": "France’s borrowing costs hit 5% for first time since 2002", "source": "FT Markets", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Inflation and government borrowing highest for a year ahead of next week's Budget", "source": "BBC Business", "label": 0, "reason": "英國本地財政通膨"}
+{"run": "2026-10-22_0800", "title": "What is happening to UK prices?", "source": "BBC Business", "label": 0, "reason": "英國本地物價解析"}
+{"run": "2026-10-22_0800", "title": "Double blow to Healey as inflation rises to 3.5% and monthly deficit hits £24bn", "source": "Guardian Business", "label": 0, "reason": "英國本地財政通膨"}
+{"run": "2026-10-22_0800", "title": "Tesla beats earnings projections after Musk floats SpaceX merger plan", "source": "Guardian Business", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-22_0800", "title": "Trump's diesel deal with Russia is unlikely to significantly lower global fuel prices despite expectations of rapid relief", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Germany's China calculation shifts as import pressures eclipse export benefits", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Euro plummets against US dollar: Has the next financial crisis begun?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Global trade weathers Iran, Ukraine and Trump's tariffs", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Diesel prices are surging putting further pressure on Europe", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Will Germany have enough gas this winter amid energy supply crunch?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Aluminium Gives Up Its War Premium, Copper Stays Elevated", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Big Oil Eyes Record Profits but Keeps Spending in Check", "source": "OilPrice", "label": 0, "reason": "外國企業財報消息"}
+{"run": "2026-10-22_0800", "title": "Russia’s Northern Sea Route Workaround Supplying Asian Buyers", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Saudi Crude Exports Hit Five-Month High as Production Falls to Record Low", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Why Are Rare Earth Stocks Falling When Prices Keep Rising?", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "GM to Add Hybrids as U.S. Gasoline Holds Above $4", "source": "OilPrice", "label": 0, "reason": "外國企業產品新聞"}
+{"run": "2026-10-22_0800", "title": "India’s Top State Refiner to Reduce Middle East Term Oil Purchases", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "EIA Says US Crude Inventories Sink Further", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Higher Oil Availability Pressures Middle East Crude Benchmarks", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Japan’s Trade Deficit Doubles as Hormuz Crisis Hikes Energy Import Costs", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Fortuna targets deeper Lindero pit after gold hits", "source": "Mining.com", "label": 0, "reason": "外國個別礦業消息"}
+{"run": "2026-10-22_0800", "title": "Hudbay, Mitsubishi approve Copper World construction", "source": "Mining.com", "label": 0, "reason": "外國個別礦業消息"}
+{"run": "2026-10-22_0800", "title": "US Stock Futures Slip After Earnings, Oil Gains: Markets Wrap", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Latest Oil Market News and Analysis for Oct. 22", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Santos Posts Record Quarterly Output on New LNG, Oil Projects", "source": "Bloomberg Markets", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-22_0800", "title": "Eight Months of War Turns China Petrochemical Glut Into a Crunch", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "Most BOJ Watchers Expect Next Interest Rate Hike in December", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "IMF Urges Currency Flexibility as RBI Mounts Rupee Defense", "source": "Bloomberg Economics", "label": 0, "reason": "印度本地匯率政策"}
+{"run": "2026-10-22_0800", "title": "Asia’s Chip Exports Soar as AI Bubble Debate Rages", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "ECB’s Kazaks Says More Tightening May Be Needed: Econostream", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "German Economy Probably Stagnated in Third Quarter: Bundesbank", "source": "Bloomberg Economics", "label": 0, "reason": "德國本地經濟數據"}
+{"run": "2026-10-22_0800", "title": "Japan Has ¥195 Trillion Inflation Windfall, Ex-BOJ Official Says", "source": "Bloomberg Economics", "label": 0, "reason": "他國財政概念討論"}
+{"run": "2026-10-22_0800", "title": "Texas Instruments Gives Sales Forecast That Tops Estimates", "source": "Bloomberg Technology", "label": 1, "reason": ""}
+{"run": "2026-10-22_0800", "title": "IBM Posts 5% Sales Growth, Says Infrastructure Deals Came Back", "source": "Bloomberg Technology", "label": 0, "reason": "外國個別企業財報"}
+{"run": "2026-10-23_0800", "title": "日本10年債殖利率漲勢恐終結 聯準會政策奏效日銀大幅升息壓力減", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "台積電評估赴美德州擴產 同步尋求無稀土馬達降低中國供應風險", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "4檔處置股因颱風順延10/27抓去關 PCB飆股金居處置到11/2止", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "宇田控制10/23登興櫃每股42.5元 全年營收可望創新高雙位數成長", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "信邦Q3純益年增24% EPS 3.79元創六季高點", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "主動式ETF規模逼近兆元大關 83%緊抱台股、跨國債券型猛增近4成", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "貨櫃海運市場罕見淡季不淡 支撐長榮、陽明、萬海本季營運", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "航運股變身資金避風港", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "經濟部樂見美光與台中工會達成協議　盼桃園廠續協商", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "AI支出疑慮與油價引賣壓　美股多收黑、那指挫逾2%", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "葉門叛軍襲沙烏地加劇中東供應疑慮　油價大漲", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "企業財報與油價衝擊市場情緒　歐股收黑", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Tightening credit conditions put pressure on Asian investments in US", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Taiwan's first-ever chip workers strike hits Micron plant", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Japan core inflation in September surges to its highest this year at 2.1%", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Bill Ackman says 2027 will be an amazing year for stocks as wars, inflation ease", "source": "CNBC Finance", "label": 0, "reason": "個人市場觀點評論"}
+{"run": "2026-10-23_0800", "title": "AI debt and French bonds face a stress test — why it may not be over", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Under-the-radar stocks to play the next leg of the energy trade with oil prices jumping again", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Nvidia CEO Jensen Huang says neocloud demand is 'off the charts' but capital is scarce", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Why Micron Stock Dropped on Thursday", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Update: US Equity Indexes Mixed as Investors Rotate From AI Trade to Government Bonds; Crude Oil Surges", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "3 Growth Stocks With At Least 29% Earnings Growth", "source": "Yahoo Finance", "label": 0, "reason": "選股推薦文章"}
+{"run": "2026-10-23_0800", "title": "Stock Market Today, Oct. 22: CoreWeave Slides on Bernstein Downgrade and Financing Worries", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "5 Undervalued AI Stocks According to the Media", "source": "Yahoo Finance", "label": 0, "reason": "媒體選股清單"}
+{"run": "2026-10-23_0800", "title": "Crypto Market Today, Oct. 22: Bitcoin and Altcoins Slide as Wall Street Fears Spill Into Crypto Markets", "source": "Yahoo Finance", "label": 0, "reason": "加密貨幣與台無關"}
+{"run": "2026-10-23_0800", "title": "Tractor Supply Q3: Getting Paid To Wait For A Recovery", "source": "Seeking Alpha", "label": 0, "reason": "外國個別企業財報"}
+{"run": "2026-10-23_0800", "title": "Tightening credit conditions put pressure on Asian investments in US", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Energy keeps Japan-Russia ties hanging on by a thread", "source": "Nikkei Asia", "label": 0, "reason": "他國外交能源關係"}
+{"run": "2026-10-23_0800", "title": "Taiwan's first-ever chip workers strike hits Micron plant", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Philippines raises key rate to 5.5% as inflation saps growth", "source": "Nikkei Asia", "label": 0, "reason": "他國本地貨幣政策"}
+{"run": "2026-10-23_0800", "title": "BOJ to hold rate at 1.25% at meeting next week", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "AI trade isn’t just about tech stocks but also power, TCW says", "source": "KED Global", "label": 0, "reason": "投資觀點概念討論"}
+{"run": "2026-10-23_0800", "title": "Hyundai Motor profit falls 30% as Middle East disruption, US tariffs bite", "source": "KED Global", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-23_0800", "title": "US weekly jobless claims near 57-year lows", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Yen set for biggest rally in a month as investors seek safe havens", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Energy security fears could spur development of Asia’s upstream gas assets: McKinsey", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "China snaps up Australian canola as improved ties, lower tariffs fuel demand", "source": "Business Times SG", "label": 0, "reason": "中澳雙邊貿易無關"}
+{"run": "2026-10-23_0800", "title": "Nasdaq tumbles while Treasuries soar as Meta rekindles AI spending fears", "source": "FT Markets", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Barclays to cut 5,000 jobs as bank’s bosses hail AI productivity advances", "source": "Guardian Business", "label": 0, "reason": "外國個別企業人事"}
+{"run": "2026-10-23_0800", "title": "Oil prices jump to five-month high as attacks threaten global supply", "source": "Guardian Business", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "US sanctions target Iran's rail sector as Tehran shifts cargo from sea routes to overland corridors", "source": "DW Business", "label": 0, "reason": "他國制裁缺傳導"}
+{"run": "2026-10-23_0800", "title": "Trump's diesel deal with Russia is unlikely to significantly lower global fuel prices despite expectations of rapid relief", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Germany's China calculation shifts as import pressures eclipse export benefits", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Euro plummets against US dollar: Has the next financial crisis begun?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Global trade weathers Iran, Ukraine and Trump's tariffs", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Diesel prices are surging putting further pressure on Europe", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Will Germany have enough gas this winter amid energy supply crunch?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Barclays to cut 5,000 jobs as it turns to AI to improve efficiency", "source": "Euronews Business", "label": 0, "reason": "重複且外國企業"}
+{"run": "2026-10-23_0800", "title": "Canada unveils $6.2bn plan to shield manufacturers as Trump trade tariffs bite", "source": "Euronews Business", "label": 0, "reason": "他國本地產業政策"}
+{"run": "2026-10-23_0800", "title": "Rising Crude Oil Imports Reduce China’s Need to Draw from Stocks", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "EU’s Arctic Strategy Excludes Oil and Gas", "source": "OilPrice", "label": 0, "reason": "歐盟本地政策"}
+{"run": "2026-10-23_0800", "title": "Electric Giants Say They Already Have the Tools to Fix the AI Power Crunch", "source": "OilPrice", "label": 0, "reason": "概念性討論為主"}
+{"run": "2026-10-23_0800", "title": "Asia Needs $1 Trillion a Year to Secure Energy Supplies", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Strathcona Pitches 250,000-Bpd Oil Export Route to Asia", "source": "OilPrice", "label": 0, "reason": "外國個別企業計畫"}
+{"run": "2026-10-23_0800", "title": "EU’s Proposed Shipping Subsidies Could Make BioLNG Cheaper Than Fuel Oil", "source": "OilPrice", "label": 0, "reason": "歐盟本地政策"}
+{"run": "2026-10-23_0800", "title": "Citi’s $60 Oil Call Meets $112 Brent", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Norway's $2.3 Trillion Oil Fund Loses $30 Billion in Third Quarter", "source": "OilPrice", "label": 0, "reason": "外國基金損益"}
+{"run": "2026-10-23_0800", "title": "European Natural Gas Prices Rise on Middle East Escalation", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Southern Copper weighs $680M Cuajone mine expansion", "source": "Mining.com", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-23_0800", "title": "US targets critical materials boost with $389M funding plan", "source": "Mining.com", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "AI boom could overwhelm metals supply: WoodMac", "source": "Mining.com", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Yen Jumps as Traders Seek Safety Amid Global Flight From Risk", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Japan Inflation Rises Above BOJ Target Level, Backing Rate Hikes", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Asian Stocks to Slide on Tech Rout, Bonds Rally: Markets Wrap", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Treasuries Surge as Worldwide Worries Spark Rush to Safety", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Latest Oil Market News and Analysis for Oct. 23", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "ECB’s Panetta Says Rising Bond Yields Will Restrain Economy", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "German Finance Ministry Says No Fiscal Leeway With Tax Revenue", "source": "Bloomberg Economics", "label": 0, "reason": "他國本地財政"}
+{"run": "2026-10-23_0800", "title": "Turkey Delivers Cautious Rate Cut, Leaves Room for Another", "source": "Bloomberg Economics", "label": 0, "reason": "他國本地貨幣政策"}
+{"run": "2026-10-23_0800", "title": "Spain Faces Oil Disruption Danger of a Different Kind", "source": "Bloomberg Economics", "label": 0, "reason": "他國本地貿易議題"}
+{"run": "2026-10-23_0800", "title": "BOK Signals More Tightening on Strong Growth After Holding Rate", "source": "Bloomberg Economics", "label": 0, "reason": "他國本地貨幣政策"}
+{"run": "2026-10-23_0800", "title": "Retail Traders Loaded Up on AI Spending Winners Before Selloff", "source": "Bloomberg Technology", "label": 1, "reason": ""}
+{"run": "2026-10-23_0800", "title": "Remain Bearish on Long-Term Treasuries: DoubleLine's Sherman", "source": "Bloomberg Technology", "label": 0, "reason": "個人觀點訪談"}
+{"run": "2026-10-24_0800", "title": "標普逼近歷史高點60%成分股卻陷熊市？SPY是否掩蓋更大問題？", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "〈貴金屬盤後〉金價摜破4000美元、本周重挫4% 油價漲勢鞏固Fed升息預期", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "SK海力士Solidigm美國上市計畫暫緩 記憶體晶片股週五強勢反彈", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "三星德州廠加碼2奈米設備！2027年下半年月產能可望達2萬片", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "〈工業生產指數〉連31紅！工業與製造業生產指數雙創新高 估10月續紅", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "〈熱門股〉東台PCB鑽孔機接單滿載直達2027年底 周漲2成創近4個月新高", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "〈熱門股〉玉晶光攜手美商3M推進擴束光學技術生產 周漲6.91%", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "載板廠發展高階產品 面臨材料瓶頸", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "台塑化：柴油供給仍吃緊 預估俄國煉油廠產品回流市場有限", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "油價勁揚和AI支出引憂　美股互有漲跌", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "中東供應風險攀升　布倫特原油價格創6個月高點", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "9月製造業生產低於預期　經部：伺服器產品組合變動影響", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Turmoil hits AI build-out as neoclouds face pressure, credit risks mount and Solidigm pulls IPO", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Investors are starting to find opportunities in the battered bond market", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Brent crude oil tops $116, a six-month high, as tensions swell in the Middle East", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "10-year Treasury yield drops back to 5% this week as investors seek cover from AI worries", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "S&P 500, Dow Drop As Elevated Oil Prices Stoke Inflation Fears Ahead Of Fed Meeting Next Week — AAPL, AXP, CART, UBER In Focus", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Oil Prices End the Week Higher on Fears of U.S.-Iran Escalation", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "3 Energy Stocks to Buy and Hold for the Next Decade, Starting With ExxonMobil", "source": "Yahoo Finance", "label": 0, "reason": "個股投資推薦"}
+{"run": "2026-10-24_0800", "title": "'Banker coin' defies oil shock as gold sinks", "source": "Yahoo Finance", "label": 0, "reason": "加密貨幣話題為主"}
+{"run": "2026-10-24_0800", "title": "Dow Jones Futures: Microsoft, Google, Amazon Lead Earnings Wave; What To Do Amid Mixed Signals", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Another AI power stock plunges 11% despite earnings beat", "source": "Yahoo Finance", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-24_0800", "title": "Global Economic Outlook 2027: Are We Heading Toward Another Financial Crisis?", "source": "Yahoo Finance", "label": 0, "reason": "概念性展望討論"}
+{"run": "2026-10-24_0800", "title": "Annaly Capital: Great Dividend, But Wait For A Discount Valuation", "source": "Seeking Alpha", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-24_0800", "title": "Mitsubishi Materials to boost thermal sensor output on AI demand", "source": "Nikkei Asia", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-24_0800", "title": "Japan banks prepared to weather AI crash, global rate spike: BOJ stress test", "source": "Nikkei Asia", "label": 0, "reason": "日本本地金融監理"}
+{"run": "2026-10-24_0800", "title": "China's 'national team' comes to rescue as stocks flash bearish signs", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Investors turn to JGBs as a safe haven as stock risks rise", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Yen on track to gain from US midterm elections and France unrest", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Hyundai Motor profit falls 30% as Middle East disruption, US tariffs bite", "source": "KED Global", "label": 0, "reason": "外國個別企業財報"}
+{"run": "2026-10-24_0800", "title": "US business activity expands, prices surge by most since 2022", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Tech sell-off relents, oil at five-month high", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Eurozone business activity slowed as France unrest weighs", "source": "Business Times SG", "label": 0, "reason": "歐洲本地景氣數據"}
+{"run": "2026-10-24_0800", "title": "China’s January-to-September fiscal revenue up 5.1% year on year", "source": "Business Times SG", "label": 0, "reason": "中國本地財政數據"}
+{"run": "2026-10-24_0800", "title": "US mortgage rates decline for first time in 9 weeks to 7.32%", "source": "Business Times SG", "label": 0, "reason": "美國本地房市消息"}
+{"run": "2026-10-24_0800", "title": "Oil hits $117 for first time since April on fears of flare-up in Iran hostilities", "source": "FT Markets", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Gold drops below $4,000 as ‘haven’ asset joins market sell-off", "source": "FT Markets", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Oil price rises above $117 a barrel amid fears US will renew strikes on Iran", "source": "Guardian Business", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Some of Europe’s highest energy costs expected in Britain this winter", "source": "Guardian Business", "label": 0, "reason": "英國本地能源議題"}
+{"run": "2026-10-24_0800", "title": "Trump's diesel deal with Russia is unlikely to significantly lower global fuel prices despite expectations of rapid relief", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Germany's China calculation shifts as import pressures eclipse export benefits", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Euro plummets against US dollar: Has the next financial crisis begun?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Global trade weathers Iran, Ukraine and Trump's tariffs", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Diesel prices are surging putting further pressure on Europe", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Will Germany have enough gas this winter amid energy supply crunch?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "EU trade Chief seeks to rebalance EU-China trade as Brussels weighs tougher measures", "source": "Euronews Business", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "France slips into contraction as Europe’s growth slows: How bad could it get?", "source": "Euronews Business", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Trump's Reverse Nixon Strategy: Bring Russia In, Shut China Out", "source": "OilPrice", "label": 0, "reason": "地緣政治評論"}
+{"run": "2026-10-24_0800", "title": "6 Million Barrels in Two Minutes Draws CFTC Scrutiny", "source": "OilPrice", "label": 0, "reason": "美國監管個案"}
+{"run": "2026-10-24_0800", "title": "U.S. Rig Count Holds Steady as Oil Prices Surge", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "$120 Oil Is Almost Here, and Trump Has Few Good Options", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Middle East Physical Crude Slides While Brent Hits Five-Month High", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "The Hidden $40-Per-Barrel Cost Driving Oil Prices Higher", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "U.S. Diesel at $6.30 a Gallon as First Russian Cargo Sets Sail for New York", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "U.S. Partner in Venezuela Oil Deal Looks to Hike Crude Production", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Oil Prices Hold Near $100 as Middle East Risks Offset Peace Hopes", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "US Department of Energy names helium to critical materials list", "source": "Mining.com", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Diesel price surge putting mining profits to test", "source": "Mining.com", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Central banks pile into gold as China leads buying spree", "source": "Mining.com", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Chipmakers Post Longest Weekly Drop Since November", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Hedge Funds Are Record Short Natural Gas on Mild Winter Outlook", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "AI Trade Stumbles Again as Investors Rediscover Treasury Haven", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "US Business Activity Expands, Prices Surge Most Since 2022", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Bank of Russia Sees Key Rate High for Longer on Refinery Strikes", "source": "Bloomberg Economics", "label": 0, "reason": "他國本地貨幣政策"}
+{"run": "2026-10-24_0800", "title": "China Barely Eased Austerity Before Shift Into Stimulus Mode", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Euro-Zone Business Activity Slowed as France Unrest Weighs", "source": "Bloomberg Economics", "label": 0, "reason": "他國本地景氣新聞"}
+{"run": "2026-10-24_0800", "title": "BOJ Is Said to Keep Rate Hikes on Fast Track, December in Focus", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "ECB Says Consumers’ Inflation Expectations Edge Up in September", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "AI Jitters, Oil & Big Tech", "source": "Bloomberg Technology", "label": 0, "reason": "節目介紹缺乏內容"}
+{"run": "2026-10-24_0800", "title": "AI Debt Fears Push Global Credit Spreads to 17-Month High", "source": "Bloomberg Technology", "label": 1, "reason": ""}
+{"run": "2026-10-24_0800", "title": "Futures Drop as Tech Stocks Slide, Oil Prices Climb Past $101 a Barrel", "source": "Bloomberg Technology", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "台股再強也別全押！0050、全球ETF怎麼配？專家揭資產配置關鍵", "source": "Yahoo奇摩財經", "label": 0, "reason": "理財觀念泛論"}
+{"run": "2026-10-25_0800", "title": "連假過後油價不上漲　汽柴油連續6週凍價", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "外資賣不下去！台股大盤「這時間」利空出盡噴向5萬點？杜金龍：尖點、台虹區間操作，欣興、富邦金逢低用力存！", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "今年來台股基金最旺冠居亞股 中小、科技績效近翻倍", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "美光罷工危機解除、外銷訂單連20紅、公股投信四合一拍板 本周大事回顧", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "輝達攻模組化 AI 工廠 這幾檔台鏈受惠相關訂單商機", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "國際品牌庫存逐步回歸健康水位 成衣大廠正向看明年景氣", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "三大因素…推升成衣代工廠平均銷售單價", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "四家半導體法說 市場焦點", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "三大因素…推升成衣銷售單價", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "中油：下週汽柴油價格不調整　累積吸收逾303億元", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "美股下跌Fed開會在即　學者看連假過後新台幣短線貶勢居多", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "China's new travel rules unsettle tech giants and talent", "source": "DW Business", "label": 0, "reason": "他國政策無傳導"}
+{"run": "2026-10-25_0800", "title": "US lawmaker to press Trump to expedite Taiwan arms sales", "source": "Nikkei Asia", "label": 0, "reason": "軍售議題非經濟"}
+{"run": "2026-10-25_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Why popular airplanes are getting scrapped years early", "source": "CNBC Finance", "label": 0, "reason": "外國航空業個別議題"}
+{"run": "2026-10-25_0800", "title": "Nvidia's role as AI financier faces first big test as neoclouds take market hit", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Turmoil hits AI buildout as neoclouds face pressure, credit risks mount and Solidigm pulls IPO", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "3 Gold Mining Stocks Retail Investors May Watch as Inflation Heats Up", "source": "Yahoo Finance", "label": 0, "reason": "外國個股推薦文"}
+{"run": "2026-10-25_0800", "title": "Fuel Oil Becomes Asia’s Next Cost Shock", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "3 Gold Stocks With Net Margins Over 34%", "source": "Yahoo Finance", "label": 0, "reason": "外國個股推薦文"}
+{"run": "2026-10-25_0800", "title": "Goldman Sachs warns on the Hormuz crisis and rising fuel costs", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "China’s Stock Market Is Trailing the U.S. by the Widest Margin in History", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Top 3 Silver Stocks To Watch In October 2026", "source": "Yahoo Finance", "label": 0, "reason": "外國個股推薦文"}
+{"run": "2026-10-25_0800", "title": "Can silver recover from its latest sell-off? UBS weighs in", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "The AI Trade Is Shifting From Chip Stocks to Cybersecurity", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Navitas Semiconductor Corporation (NVTS) Discusses Breaking the AI Infrastructure Power Wall and Portfolio Expansion Through Recent Acquisition - Slideshow", "source": "Seeking Alpha", "label": 0, "reason": "外國企業簡報資訊"}
+{"run": "2026-10-25_0800", "title": "China urges US to halt proposed expansion of outbound investment curbs", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "US lawmaker to press Trump to expedite Taiwan arms sales", "source": "Nikkei Asia", "label": 0, "reason": "軍事外交非經濟議題"}
+{"run": "2026-10-25_0800", "title": "Stronger Japan alliance needed for deterrence: Senior US official", "source": "Nikkei Asia", "label": 0, "reason": "軍事同盟非經濟議題"}
+{"run": "2026-10-25_0800", "title": "China's automaking rise spurs German industry's turn to arms", "source": "Nikkei Asia", "label": 0, "reason": "德國本地產業新聞"}
+{"run": "2026-10-25_0800", "title": "Mitsubishi Materials to boost thermal sensor output on AI demand", "source": "Nikkei Asia", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-25_0800", "title": "Japan banks prepared to weather AI crash, global rate spike: BOJ stress test", "source": "Nikkei Asia", "label": 0, "reason": "日本本地金融監理"}
+{"run": "2026-10-25_0800", "title": "Japan's regional banks in merger talks to form largest in nation's west", "source": "Nikkei Asia", "label": 0, "reason": "日本地方銀行併購"}
+{"run": "2026-10-25_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "AI trade isn’t just about tech stocks but also power, TCW says", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Korean shipbuilders sweep up LNG, ammonia orders as energy demand holds firm", "source": "KED Global", "label": 0, "reason": "韓國個別企業接單"}
+{"run": "2026-10-25_0800", "title": "South Korean stock market value tops $4.1 trillion, nearly tripling in a year", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Hyundai Motor profit falls 30% as Middle East disruption, US tariffs bite", "source": "KED Global", "label": 0, "reason": "外國個別企業財報"}
+{"run": "2026-10-25_0800", "title": "A little bit of luck is lifting UK Budget expectations", "source": "FT Markets", "label": 0, "reason": "英國本地財政政策"}
+{"run": "2026-10-25_0800", "title": "Trump's diesel deal with Russia is unlikely to significantly lower global fuel prices despite expectations of rapid relief", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Germany's China calculation shifts as import pressures eclipse export benefits", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Euro plummets against US dollar: Has the next financial crisis begun?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Turkey: Stock market scandal hits half a million investors", "source": "DW Business", "label": 0, "reason": "土耳其本地股市事件"}
+{"run": "2026-10-25_0800", "title": "Diesel prices are surging putting further pressure on Europe", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "China's new travel rules unsettle tech giants and talent", "source": "DW Business", "label": 0, "reason": "對台傳導路徑不明"}
+{"run": "2026-10-25_0800", "title": "Will Germany have enough gas this winter amid energy supply crunch?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Record Tanker Rates Cripple U.S. Crude Oil Flows to Asia", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Fuel Oil Becomes Asia’s Next Cost Shock", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "‘Total Meltdown’ in Riskiest Debt Unnerves Market: Credit Weekly", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Persistent Oil Prices Threaten Inflation Outlook", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Oil Markets Brace for Renewed Iran Fighting", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-25_0800", "title": "Fed Set to Lead G7 Trio in Hawkish Rate Pause: Eco Week Ahead", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "英特爾今年股價飆漲後回檔 AI業務躍升主要成長動能", "source": "Yahoo奇摩財經", "label": 0, "reason": "外國個別企業股價消息"}
+{"run": "2026-10-26_0800", "title": "油價飆升至每桶 117 美元 美國中東增軍事活動引市場憂", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "黃金單週重挫逾4%　現在是買點？專家揭關鍵", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "美期中選舉前大盤加速趕底 8檔台股搶手型ETF戰力猛", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "AI巨頭砸錢提前鎖產能！關鍵載板缺口擴大，產業定價權全面逆轉", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "折疊 iPhone 搶手 傳蘋果要求追加三成訂單 鴻海、台積等進補", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "AI 業搶貨 航空運價急漲一成 長榮航：還有調升空間", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "航空雙雄滿手單 營運吞補丸", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "燃油成本飆 航空業者大考驗", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "長榮航：客運旺、AI貨運無淡季　油價成最大變數", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "美國期中選舉倒數　聯準會下週利率料將按兵不動", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "AI基建融資疑慮升溫　分析師：擴張受限或有助延長景氣強勁時間", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "China's new travel rules unsettle tech giants and talent", "source": "DW Business", "label": 0, "reason": "與台灣經濟傳導不明"}
+{"run": "2026-10-26_0800", "title": "US lawmaker to press Trump to expedite Taiwan arms sales", "source": "Nikkei Asia", "label": 0, "reason": "軍售政治議題非經濟"}
+{"run": "2026-10-26_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "The Fed, Inflation, Verizon, Boeing, Alphabet, GE Vernova, Amazon, and Many More Stocks to Watch This Week", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Bank of America warns of 2027 stock market risk few expect", "source": "Yahoo Finance", "label": 0, "reason": "概念討論缺具體"}
+{"run": "2026-10-26_0800", "title": "Dow Jones Futures Rise With Microsoft, Google, Amazon Ahead; Will Doom Or Bloom Control Market?", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Oil Supply Risks Put Phillips 66 Stock And Global Energy Majors In Focus", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Big Tech Earnings, Fed Decision and Other Key Things to Watch this Week", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "88% Profit Surge Expected on Oct. 28: Why Peter Thiel-Backed Vista Energy is Wall Street’s Favorite Shale Play", "source": "Yahoo Finance", "label": 0, "reason": "外國個別企業"}
+{"run": "2026-10-26_0800", "title": "Stock Futures Are Rising Ahead of Fed Decision", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "The S&P 500 Is At A Crossroads, That's A Buying Opportunity", "source": "Seeking Alpha", "label": 0, "reason": "單純投資觀點"}
+{"run": "2026-10-26_0800", "title": "Amkor Technology: Nvidia's $3 Billion Vote Of Confidence Lands On A De-Rated Stock", "source": "Seeking Alpha", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Meta Q3: Non-Recurring Charge Hit GAAP Earnings, Q4 Capex Will Jump Sharply", "source": "Seeking Alpha", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "REITs Rebound As Earnings Deliver", "source": "Seeking Alpha", "label": 0, "reason": "美國本地不動產"}
+{"run": "2026-10-26_0800", "title": "Wall Street Brunch: Fed And Hyperscaler Earnings", "source": "Seeking Alpha", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "AI stock falls are sore spot for China's self-reliance strategy", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "China's fifth plenum, Jio listing on Indian bourses, BOJ meeting", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "China urges US to halt proposed expansion of outbound investment curbs", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "US lawmaker to press Trump to expedite Taiwan arms sales", "source": "Nikkei Asia", "label": 0, "reason": "軍售屬地緣政治議題"}
+{"run": "2026-10-26_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "AI trade isn’t just about tech stocks but also power, TCW says", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "South Korean stock market value tops $4.1 trillion, nearly tripling in a year", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Hyundai Motor profit falls 30% as Middle East disruption, US tariffs bite", "source": "KED Global", "label": 0, "reason": "外國個別企業財報"}
+{"run": "2026-10-26_0800", "title": "Baltic Exchange Shipping Insights", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Goldman cuts Kospi 12-month target by 25% as AI trade unravels", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "US Fed set to lead G7 trio in hawkish rate pause", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "China’s US$3.5 trillion stock rout deepens as profits sink, major stimulus stays elusive", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Trump's diesel deal with Russia is unlikely to significantly lower global fuel prices despite expectations of rapid relief", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Germany's China calculation shifts as import pressures eclipse export benefits", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Euro plummets against US dollar: Has the next financial crisis begun?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Turkey: Stock market scandal hits half a million investors", "source": "DW Business", "label": 0, "reason": "他國本地股市事件"}
+{"run": "2026-10-26_0800", "title": "Diesel prices are surging putting further pressure on Europe", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "China's new travel rules unsettle tech giants and talent", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Will Germany have enough gas this winter amid energy supply crunch?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Asia Is Building the World’s Next $15 Trillion Energy Market", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Oil Prices Rise Despite Middle East Export Recovery", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Gold Steadies After Weekly Drop as Focus Shifts to Fed Meeting", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Goldman Says Yen Becoming Better Hedge Against AI Market Shock", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "US Stock Futures Climb as Crude Oil Price Dips: Markets Wrap", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Latest Oil Market News and Analysis for Oct. 26", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Zero-Day Option Traders Are Betting Against Big S&P 500 Swings", "source": "Bloomberg Markets", "label": 0, "reason": "交易策略概念討論"}
+{"run": "2026-10-26_0800", "title": "Fed Looks Set to Pause After September Rate Hike", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Emerging Debt Outruns Treasuries as Rich-World Fiscal Fears Grow", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "What’s Happening in EM: Bond Investors Turn to Developing World", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Warsh Tells Traders to Watch the Data. They Still Follow the Fed", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Musk Claims SpaceX Closed $40 Billion Debt Deal for AI Chips", "source": "Bloomberg Technology", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "AI Spending Fears Threaten to Swamp Big Tech’s Strong Earnings", "source": "Bloomberg Technology", "label": 1, "reason": ""}
+{"run": "2026-10-26_0800", "title": "Chinese Manufacturer Dongshan Raises $1.3 Billion in HK Listing", "source": "Bloomberg Technology", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "IEA示警能源市場明年難回戰前水準，油價逼近120美元、歐洲面臨嚴冬", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "恆生指數週一收漲0.51%，石油、煤炭及銀行股獲買盤支撐，光通訊股承壓", "source": "Yahoo奇摩財經", "label": 0, "reason": "港股小幅波動無傳導"}
+{"run": "2026-10-27_0800", "title": "日經指數週一跌0.8%連三黑創3個月新低，東證逆漲0.18%、能源商社股撐盤", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "AI投資過熱、油價攀升 亞洲貨幣承壓新台幣難倖免", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "美銀逆勢押Fed 10月及12月連續升息，示警通膨黏性與能源成本壓力", "source": "Yahoo奇摩財經", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "〈台股盤前要聞〉美光罷工危機解除、四大公股投信整併案拍板", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "〈熱門股〉中釉憑轉型新材料事業力拚轉機 周漲12.44%站回所有均線", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "外資狂賣3025億元台股不妙？野村估明年EPS成長29% 科技ETF展韌性", "source": "鉅亨網", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "上銀董座卓文恒露口風 機器人零組件出貨了 開始供應美系大廠", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "半導體特化鏈啟動大投資 布局未來五年需求", "source": "經濟日報 產業", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "國際油價小幅回落　歐洲股市收盤揚升", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "路透：越南首座晶片廠難達明年試產目標　未敲定ASML設備採購", "source": "中央社 財經", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Investors are doing just as well this year by shunning AI. How to invest if the tech trade keeps fizzling", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "China's new travel rules unsettle tech giants and talent", "source": "DW Business", "label": 0, "reason": "中國人才政策關聯弱"}
+{"run": "2026-10-27_0800", "title": "AI and oil worries rattle Asian currencies from Taiwan to Philippines", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Bank of Japan is expected to hold rates this week — but stay hawkish: CNBC survey", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Investors are doing just as well this year by shunning AI. How to invest if the tech trade keeps fizzling", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Federal Reserve is likely to hold interest rates steady in October. Here's what that means for consumers", "source": "CNBC Finance", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Analysis: Why a $2 trillion deficit and 5% Treasury yields are becoming America's biggest economic challenge", "source": "CNBC World Economy", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "80% of S&P 500 stocks are in correction territory. These 3 are still buys", "source": "Yahoo Finance", "label": 0, "reason": "個股選股建議"}
+{"run": "2026-10-27_0800", "title": "Beijing Pushes Domestic Oil Production as Iranian Supply Dries Up", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "S&P 500, Nasdaq, Dow Begin Week Higher As Anthropic IPO Filing Rekindles AI Enthusiasm — MSFT, AAPL, CART, VZ In Focus", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "1 consumer stock with solid fundamentals and 2 we brush off", "source": "Yahoo Finance", "label": 0, "reason": "個股選股建議"}
+{"run": "2026-10-27_0800", "title": "Stock Market Today, Oct. 26: AI Optimism Lifts Nasdaq as Tech Stocks Rebound", "source": "Yahoo Finance", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Anthropic S-1 Registration Dominates, Leads Nasdaq Higher", "source": "Seeking Alpha", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "BE Semiconductor Industries N.V. 2026 Q3 - Results - Earnings Call Presentation", "source": "Seeking Alpha", "label": 0, "reason": "僅簡報無具體內容"}
+{"run": "2026-10-27_0800", "title": "Konecranes Plc 2026 Q3 - Results - Earnings Call Presentation", "source": "Seeking Alpha", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-27_0800", "title": "South Korea's economy grows 1.0% in 3rd quarter on chip boom", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "AI and oil worries rattle Asian currencies from Taiwan to Philippines", "source": "Nikkei Asia", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Japan to back perovskite solar cell mass production with $640m in subsidies", "source": "Nikkei Asia", "label": 0, "reason": "日本本地產業政策"}
+{"run": "2026-10-27_0800", "title": "India's chip design startups struggle with final commercial hurdle", "source": "Nikkei Asia", "label": 0, "reason": "印度本地新創消息"}
+{"run": "2026-10-27_0800", "title": "Asian fixed income draws support from capex boom, shrinking dollar supply: Principal", "source": "KED Global", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Hyundai Motor profit falls 30% as Middle East disruption, US tariffs bite", "source": "KED Global", "label": 0, "reason": "外國個別企業財報"}
+{"run": "2026-10-27_0800", "title": "Could new US investment curbs complicate China’s biotech licensing surge?", "source": "SCMP Business", "label": 0, "reason": "與台灣無傳導路徑"}
+{"run": "2026-10-27_0800", "title": "China’s bearish stock market faces more pressure from weak earnings growth forecast", "source": "SCMP Business", "label": 0, "reason": "中國本地股市議題"}
+{"run": "2026-10-27_0800", "title": "EU plans to hit China with more import curbs in early 2027", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Vietnam’s first chip plant unlikely to meet 2027 target, sources say no deal yet with ASML", "source": "Business Times SG", "label": 0, "reason": "越南本地建廠計畫"}
+{"run": "2026-10-27_0800", "title": "Chinese carmakers overtake Japan in Europe for first time", "source": "Business Times SG", "label": 0, "reason": "外國車市消息"}
+{"run": "2026-10-27_0800", "title": "What different US midterm outcomes could mean for markets", "source": "Business Times SG", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "EU loan to Airbus threatens trade truce with US, Trump trade official warns", "source": "FT Markets", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "European gas prices soar to four-year high over winter supply fears", "source": "Guardian Business", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "‘We don’t have inflation’? Five charts show the US economic reality of Trump’s second term so far", "source": "Guardian Business", "label": 0, "reason": "政治性回顧評論"}
+{"run": "2026-10-27_0800", "title": "EU promotes sovereign, trusted AI as it struggles to catch US and China", "source": "DW Business", "label": 0, "reason": "概念性產業討論"}
+{"run": "2026-10-27_0800", "title": "Why Chinese tech brands are outpacing Western rivals from EVs to robot vacuums", "source": "DW Business", "label": 0, "reason": "概念性產業討論"}
+{"run": "2026-10-27_0800", "title": "Trump's diesel deal with Russia is unlikely to significantly lower global fuel prices despite expectations of rapid relief", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Germany's China calculation shifts as import pressures eclipse export benefits", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Euro plummets against US dollar: Has the next financial crisis begun?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Turkey: Stock market scandal hits half a million investors", "source": "DW Business", "label": 0, "reason": "他國本地市場醜聞"}
+{"run": "2026-10-27_0800", "title": "Diesel prices are surging putting further pressure on Europe", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "China's new travel rules unsettle tech giants and talent", "source": "DW Business", "label": 0, "reason": "他國人才政策新聞"}
+{"run": "2026-10-27_0800", "title": "Will Germany have enough gas this winter amid energy supply crunch?", "source": "DW Business", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "UK Weighs Scrapping Its Largest Untapped Oilfield With Oil Over $100", "source": "OilPrice", "label": 0, "reason": "英國本地能源政策"}
+{"run": "2026-10-27_0800", "title": "Beijing Pushes Domestic Oil Production as Iranian Supply Dries Up", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Asia Needs $1 Trillion a Year to Avoid the Next Energy Shock", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Kazakhstan Faces $12 Billion Oil Setback as New Investment Plans Take Shape", "source": "OilPrice", "label": 0, "reason": "他國本地投資消息"}
+{"run": "2026-10-27_0800", "title": "Why Saudi Just Abandoned Its Core Oil Rule", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Russian Refiners Ramp Up Diesel Output to Supply Trump Deal", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Is Wall Street Getting It All Wrong About AI, Oil, and Bonds?", "source": "OilPrice", "label": 0, "reason": "單純概念討論"}
+{"run": "2026-10-27_0800", "title": "India’s BPCL to Cut Russian Oil Imports Due to Higher Prices", "source": "OilPrice", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Codelco, BHP launch $40M copper hunt in northern Chile", "source": "Mining.com", "label": 0, "reason": "外國個別企業消息"}
+{"run": "2026-10-27_0800", "title": "Strike curbs output at Canada’s largest copper mine", "source": "Mining.com", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Gold Steadies Near $4,000 as Traders Prepare for Fed Rate Call", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Asian Stocks to Rise on Tech Rebound, Oil Drops: Markets Wrap", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Latest Oil Market News and Analysis for Oct. 27", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "AI Funding Drives US High-Grade Bond Sales to Annual Record", "source": "Bloomberg Markets", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "South Korea’s Economy Beats Forecasts on AI-Driven Chip Boom", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "EU Plans to Hit China With More Import Curbs in Early 2027", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Pakistan Raises Rates as Middle East Conflict Fans Inflation", "source": "Bloomberg Economics", "label": 0, "reason": "他國本地貨幣政策"}
+{"run": "2026-10-27_0800", "title": "Fed Meeting Focus Turns to Warsh Messaging With December in Mind", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Euro-Zone Slowdown Will Help Keep ECB Rates on Hold for Now", "source": "Bloomberg Economics", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "Thailand Imports Surge at Record Pace on AI, Energy Demand", "source": "Bloomberg Economics", "label": 0, "reason": "他國本地貿易數據"}
+{"run": "2026-10-27_0800", "title": "Applied Materials Boosts BE Semiconductor Stake to About 20%", "source": "Bloomberg Technology", "label": 1, "reason": ""}
+{"run": "2026-10-27_0800", "title": "SK Hynix, Samsung, Kioxia, CXMT Earnings Test AI Boom in Memory Market", "source": "Bloomberg Technology", "label": 1, "reason": ""}
