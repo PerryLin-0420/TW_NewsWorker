@@ -83,7 +83,7 @@ copy .env.example .env
 |---|---|
 | `GMAIL_ADDRESS` | 寄件 Gmail |
 | `GMAIL_APP_PASSWORD` | Gmail 應用程式密碼（需開兩步驟驗證後產生） |
-| `RECIPIENT_EMAIL` | 收件人；可加 `RECIPIENT_EMAIL_2`、`RECIPIENT_EMAIL_3` |
+| `RECIPIENT_EMAIL` | 收件人；可加 `RECIPIENT_EMAIL_2` |
 | `CLAUDE_CODE_OAUTH_TOKEN` | 執行 `claude setup-token` 產生的長期 token（使用 Claude 訂閱） |
 
 `claude` CLI 路徑的尋找順序：`config.json` 的 `claude_exe` → 環境變數 `CLAUDE_CODE_EXECPATH` → `%APPDATA%\Claude\claude-code\<版本>\claude.exe` → `PATH`。
